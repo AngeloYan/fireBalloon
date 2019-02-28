@@ -63,5 +63,21 @@ User stories are formatted as follows: <br>
       system: what would you like to know?
 
 **As a user I want the system to remember information I have previously given so that I do not have to repeat the information.**
+1. As a: user<br>
+   I want: the system to remember information that I have previously given<br>
+   So that: I do not have to repeat the information<br>
+   Story points: 3<br>
+   Priority: 1<br>
+   Acceptance criteria: <br>
+   - System stores keywords from previous questions and answers
+
+2. As a: user<br>
+   I want: the system to use information that I have previously given to answer my questions<br>
+   So that: I do not have to repeat the questions<br>
+   Story points: 8<br>
+   Priority: 1<br>
+   Acceptance criteria: <br>
+   - System uses new information given by the user to generate responses
+   - System uses old information given by the user to generate responses
 
 **As a user I want to be able to have questions about a course's content answered so that I can study using the system.**
