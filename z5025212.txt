@@ -1,2 +1,5 @@
+Week 1 20/02/19
+Group formed. Spent the lab time setting up Github group and Trello. Decided to do project 1 because it was more clearly defined. Specifically, chose to do a course support system which includes course admin and course content.
+
 25/02/19
 placeholder
