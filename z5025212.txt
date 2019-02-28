@@ -7,3 +7,6 @@ Had group meeting. Discussed available tools and technologies to be used in the 
 Will be creating web app using Flask for the server and simple HTML, CSS and JS for client. This is because we are not experienced with web frameworks but we are experienced with python.
 
 Discussed what to include in the proposal and divided work. Wrote up basic outline for epic user stories. I will be working on fleshing out epic user stories and writing user stories.
+
+Week 2 27/02/19
+Asked questions about proposal to tutor. We were confused about what needed to be included in the proposal because the specifications were very vague but we were still not given clear direction. For example, "technical depth of the project and its scale" is worth 50% of the proposal but there is no information on what is to be included. This is really frustrating because what is the point of doing the course if no one is going to teach us how to do a project proposal and we have to learn how to write one ourselves?
