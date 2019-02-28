@@ -62,7 +62,7 @@ User stories are formatted as follows: <br>
     - user: tell me about COMP9900<br>
       system: what would you like to know?
 
-**As a user I want the system to remember information I have previously given so that I do not have to repeat the information.**
+**As a user I want the system to answer questions based on the context of the conversation so I can converse with it like I would with a human.**
 1. As a: user<br>
    I want: the system to remember information that I have previously given<br>
    So that: I do not have to repeat the information<br>
