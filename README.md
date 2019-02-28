@@ -44,6 +44,23 @@ User stories are formatted as follows: <br>
    - When the on-screen button is clicked again, the system exits speech detection mode
 
 **As a user I want the system to suggest new questions based on my previous questions so that I save time asking questions.**
+1. As a: user<br>
+   I want: the sytem to generate questions based on my recent questions<br>
+   So that: I save time asking questions<br>
+   Story points: 5<br>
+   Priority: <br>
+   Acceptance criteria: <br>
+   - e.g. after answering the question "Who is my lecturer?" the system will suggest the question "What is their email address?"
+2. As a: user<br>
+   I want: the system's replies to have a conversational flow<br>
+   So that: it is intuitive to use<br>
+   Story points: 7<br>
+   Priority: 3<br>
+   Acceptance criteria: <br>
+   - System can ask questions for clarification
+   - System can ask open ended questions
+    - user: tell me about COMP9900<br>
+      system: what would you like to know?
 
 **As a user I want the system to remember information I have previously given so that I do not have to repeat the information.**
 
