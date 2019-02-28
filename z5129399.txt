@@ -1,4 +1,5 @@
 Week 1
 
+Team formed.
 The first week we planed to make a draft for our proposal. 
 We finaly determines candidates of epics
