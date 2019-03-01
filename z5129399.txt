@@ -2,9 +2,9 @@ Week 1
 
 Team formed.
 The first week we planed to make a draft for our proposal. 
-We finaly determines candidates of epics
-the obstacles(mainly about proposal): 1, how deep are content extraction and matching
-               2, will database be provided
-               3, do we need to support Collaborative Learning
+We finaly determined candidates of epics
+The obstacles(mainly about proposal): 1, how deep are content extraction and matching
+                                      2, will database be provided
+                                      3, do we need to support Collaborative Learning
 the first and sencond we didn't solve from the lab hours. and we know we do not need achieve 3 by the tutor said.
-next period we plan to do some research to work out a structure, as well as learn related knowledge and techniques 
+Next period we plan to do some research to work out a structure, as well as learn related knowledge and techniques 
