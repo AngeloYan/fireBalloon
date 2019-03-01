@@ -29,16 +29,25 @@ User stories are formatted as follows: <br>
    Acceptance criteria: <br>
    - System is able to recognise keywords in question
 3. As a: user<br>
-   I want: my questions and queries about a course outline to be answered<br>
+   I want: the system to respond to my questions with relevant information<br>
    So that: I can know information relevant to the course<br>
-   Story points: 50<br>
+   Story points: 30<br>
+   Priority: 1<br>
+   Acceptance criteria: <br>
+   - System is able to extract relevant information from a database using keywords
+   - e.g. who is the lecturer for COMP9900?
+   - e.g. tell me the lecturer for COMP9900.
+4. As a: user<br>
+   I want: the system's answers to be formed into sentences<br>
+   So that: it is more natural to converse with the system<br>
+   Story points: 20<br>
    Priority: 1<br>
    Acceptance criteria: <br>
    - System is able to extract relevant information from a database using keywords
    - System is able to display relevant information to the user
    - e.g. who is the lecturer for COMP9900?
    - e.g. tell me the lecturer for COMP9900.
-4. As a: user<br>
+5. As a: user<br>
    I want: the system to recognise my speech<br>
    So that: I can ask my questions out loud<br>
    Story points: 10<br>
@@ -63,7 +72,7 @@ A large part of the story points in this epic are from the third user story. We 
 2. As a: user<br>
    I want: the system's replies to have a conversational flow<br>
    So that: it is intuitive to use<br>
-   Story points: 7<br>
+   Story points: 50<br>
    Priority: 3<br>
    Acceptance criteria: <br>
    - System can ask questions for clarification
@@ -91,7 +100,7 @@ A large part of the story points in this epic are from the third user story. We 
 1. As a: user<br>
    I want: the system to remember information that I have previously given<br>
    So that: I do not have to repeat the information<br>
-   Story points: 3<br>
+   Story points: 20<br>
    Priority: 1<br>
    Acceptance criteria: <br>
    - System stores keywords from previous questions and answers
@@ -99,10 +108,9 @@ A large part of the story points in this epic are from the third user story. We 
 2. As a: user<br>
    I want: the system to use information that I have previously given to answer my questions<br>
    So that: I do not have to repeat the questions<br>
-   Story points: 8<br>
+   Story points: 70<br>
    Priority: 1<br>
    Acceptance criteria: <br>
-   - System uses new information given by the user to generate responses
    - System uses old information given by the user to generate responses
 
 **As a user I want to be able to have questions about a course's content answered so that I can study using the system.**
