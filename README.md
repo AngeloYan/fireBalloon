@@ -22,17 +22,23 @@ User stories are formatted as follows: <br>
    - User is able to type in a text box
    - When an on-screen button or the enter key is pressed, the text in the text box is sent to the server
 2. As a: user<br>
-   I want: my questions and queries about a course outline to be answered<br>
-   So that: I can know information relevant to the course<br>
-   Story points: 15<br>
+   I want: the system to understand my questions<br>
+   So that: the system can provide a relevant answer<br>
+   Story points: 10<br>
    Priority: 1<br>
    Acceptance criteria: <br>
    - System is able to recognise keywords in question
-   - System is able to extract relevant information from a database
+3. As a: user<br>
+   I want: my questions and queries about a course outline to be answered<br>
+   So that: I can know information relevant to the course<br>
+   Story points: 30<br>
+   Priority: 1<br>
+   Acceptance criteria: <br>
+   - System is able to extract relevant information from a database using keywords
    - System is able to display relevant information to the user
    - e.g. who is the lecturer for COMP9900?
    - e.g. tell me the lecturer for COMP9900.
-3. As a: user<br>
+4. As a: user<br>
    I want: the system to recognise my speech<br>
    So that: I can ask my questions out loud<br>
    Story points: 10<br>
@@ -43,9 +49,9 @@ User stories are formatted as follows: <br>
    - In speech detection mode, the user's speech is converted into text displayed in the text box to enter messages.
    - When the on-screen button is clicked again, the system exits speech detection mode
 
-**As a user I want the system to suggest new questions based on my previous questions so that I save time asking questions.**
+**As a user I want the system to be able to respond conversationally so that it is not a simple question and answer bot.**
 1. As a: user<br>
-   I want: the sytem to generate questions based on my recent questions<br>
+   I want: the sytem to suggest new questions based on my recent questions<br>
    So that: I save time asking questions<br>
    Story points: 5<br>
    Priority: <br>
@@ -59,8 +65,14 @@ User stories are formatted as follows: <br>
    Acceptance criteria: <br>
    - System can ask questions for clarification
    - System can ask open ended questions
-    - user: tell me about COMP9900<br>
-      system: what would you like to know?
+   - e.g. user: tell me about COMP9900<br>
+     system: what would you like to know?
+3. As a: user<br>
+   I want: <br>
+   So that: <br>
+   Story points: <br>
+   Priority: <br>
+   Acceptance criteria: <br>
 
 **As a user I want the system to answer questions based on the context of the conversation so I can converse with it like I would with a human.**
 1. As a: user<br>
@@ -81,3 +93,21 @@ User stories are formatted as follows: <br>
    - System uses old information given by the user to generate responses
 
 **As a user I want to be able to have questions about a course's content answered so that I can study using the system.**
+
+**As a developer I want it to be easy for users to access the system so that more users will use the system**
+1. As a: developer<br>
+   I want: users to be able to access the system through Facebook Messenger<br>
+   So that: Facebook Messenger will be able to access the system<br>
+   Story points: 10<br>
+   Priority: 3<br>
+   Acceptance criteria: <br>
+   - Users can send messages to the system through Facebook Messenger
+   - Users can receive messages from the system through Facebook Messenger
+2. As a: developer<br>
+   I want: users to be able to access the system through Trello<br>
+   So that: Trello will be able to access the system<br>
+   Story points: 10<br>
+   Priority: 4<br>
+   Acceptance criteria: <br>
+   - Users can send messages to the system through Facebook Messenger
+   - Users can receive messages from the system through Facebook Messenger
