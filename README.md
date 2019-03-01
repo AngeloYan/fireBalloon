@@ -43,10 +43,7 @@ User stories are formatted as follows: <br>
    Story points: 20<br>
    Priority: 1<br>
    Acceptance criteria: <br>
-   - System is able to extract relevant information from a database using keywords
-   - System is able to display relevant information to the user
-   - e.g. who is the lecturer for COMP9900?
-   - e.g. tell me the lecturer for COMP9900.
+   - System is able to display answers to the user in fully formed sentences
 5. As a: user<br>
    I want: the system to recognise my speech<br>
    So that: I can ask my questions out loud<br>
@@ -70,16 +67,24 @@ A large part of the story points in this epic are from the third user story. We 
    - The system suggests related questions for the user to ask after it has given an answer
    - e.g. after answering the question "Who is my lecturer?" the system will suggest the question "What is their email address?"
 2. As a: user<br>
-   I want: the system's replies to have a conversational flow<br>
-   So that: it is intuitive to use<br>
-   Story points: 50<br>
+   I want: the system to ask close ended questions for more information if it cannot answer my question with the given information<br>
+   So that: the system can answer my question<br>
+   Story points: 30<br>
    Priority: 3<br>
    Acceptance criteria: <br>
-   - System can ask questions for clarification
-   - System can ask open ended questions
+   - System can ask close ended questions for clarification
+   - e.g. user: tell me about COMP9900<br>
+     system: would you like to know about the course outline or course content?
+3. As a: user<br>
+   I want: the system to ask open ended questions for more information if it cannot answer my question with the given information<br>
+   So that: the system can answer my question<br>
+   Story points: 30<br>
+   Priority: 3<br>
+   Acceptance criteria: <br>
+   - System can ask open ended questions for clarification
    - e.g. user: tell me about COMP9900<br>
      system: what would you like to know?
-3. As a: user<br>
+4. As a: user<br>
    I want: the system to be able to handle unexpected phrases<br>
    So that: the system can continue the flow of conversation<br>
    Story points: 10<br>
@@ -87,7 +92,7 @@ A large part of the story points in this epic are from the third user story. We 
    Acceptance criteria: <br>
    - System responds even if unexpected input is given
       - e.g. "daskljfklsadflsa"
-4. As a: user<br>
+5. As a: user<br>
    I want: the system to be able to handle unrelated questions<br>
    So that: the system can continue the flow of conversation<br>
    Story points: 10<br>
