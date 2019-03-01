@@ -55,7 +55,7 @@ User stories are formatted as follows: <br>
    - In speech detection mode, the user's speech is converted into text displayed in the text box to enter messages.
    - When the on-screen button is clicked again, the system exits speech detection mode
 
-A large part of the story points in this epic are from the third user story. We are inexperience with Dialogflow, so a large part of this epic will be researching and learning how to use Dialogflow. This user story cannot be broken up into smaller stories because the high number of story points comes from a lack in skills and not the complexity of the story.
+A large part of this epic will be researching and learning how to use Dialogflow. This large user stories cannot be broken up into smaller stories because the high number of story points comes from a lack in skills and not the complexity of the story.
 
 **As a user I want the system to be able to respond conversationally so that it is not a simple question and answer bot.**
 1. As a: user<br>
