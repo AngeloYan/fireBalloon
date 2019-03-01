@@ -146,4 +146,17 @@ This is an extension to the epic user story "as a user I want to be able to have
    - Users can send messages to the system through Facebook Messenger
    - Users can receive messages from the system through Facebook Messenger
 
+## Chosen epics
+For our project demo, we have chosen to implement the following epics:
+- As a user I want to be able to have questions about a course's outline answered so that I can prepare for the course.
+- As a user I want the system to be able to respond conversationally so that it is not a simple question and answer bot.
+- As a user I want the system to answer questions based on the context of the conversation so I can converse with it like I would with a human.
+
+These 3 epics were chosen because they contain user stories with the highest priorities. The user stories from the other epics will be attempted if time allows, in order of priority.
+
+The sum of the story points from the 3 chosen epics is 290. UNSW expects a course's workload to be 25 hours per term per UOC. COMP[39]900 is worth 6 OUC so each member's work load should roughly equal 150 hours for the whole 10 weeks (15 hours per week). To calculate time actually spent working on completing user stories, we have removed 3 hours a week due to scheduling 3 hours of meetings per week. We also have scheduled to finish the project 1 week early in order to spend the last week debugging and writing the report. This results in each member spending a total of 12 * 6 = 72 hours working on completing user stories. For the whole team of four, 72 * 4 = 288 hours will be spent working on completing user stories.
+
+To summarise, we expect to be able to complete the user stories on time as we expect to spend 288 hours completing 290 hours of user stories. The 2 hours we are missing out is negligible and can be made up during the final week if necessary. We have planned to stop working on user stories 1 week before the deadline to give us time to debug our software and write our report.
+
 ## Sprints
+MVP
