@@ -112,13 +112,21 @@ A large part of the story points in this epic are from the third user story. We 
 
 2. As a: user<br>
    I want: the system to use information that I have previously given to answer my questions<br>
-   So that: I do not have to repeat the questions<br>
+   So that: I do not have to repeat the information<br>
    Story points: 70<br>
    Priority: 1<br>
    Acceptance criteria: <br>
    - System uses old information given by the user to generate responses
 
 **As a user I want to be able to have questions about a course's content answered so that I can study using the system.**
+This is an extension to the epic user story "as a user I want to be able to have questions about a course's outline answered so that I can prepare for the course". This epic involves adding the contents of courses into the database that the system uses to generate responses to the user's questions.
+1. As a: user<br>
+   I want: i want to be able to have questions about a course's content answered<br>
+   So that: I can study using the system<br>
+   Story points: 30<br>
+   Priority: 5<br>
+   Acceptance criteria: <br>
+   - System can answer questions about a course's content
 
 **As a developer I want it to be easy for users to access the system so that more users will use the system**
 1. As a: developer<br>
