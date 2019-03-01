@@ -16,7 +16,7 @@ User stories are formatted as follows: <br>
 1. As a: user<br>
    I want: to be able to type messages to the system<br>
    So that: I can request information<br>
-   Story points: 4<br>
+   Story points: 10<br>
    Priority: 1<br>
    Acceptance criteria: <br>
    - User is able to type in a text box
@@ -24,14 +24,14 @@ User stories are formatted as follows: <br>
 2. As a: user<br>
    I want: the system to understand my questions<br>
    So that: the system can provide a relevant answer<br>
-   Story points: 10<br>
+   Story points: 20<br>
    Priority: 1<br>
    Acceptance criteria: <br>
    - System is able to recognise keywords in question
 3. As a: user<br>
    I want: my questions and queries about a course outline to be answered<br>
    So that: I can know information relevant to the course<br>
-   Story points: 30<br>
+   Story points: 50<br>
    Priority: 1<br>
    Acceptance criteria: <br>
    - System is able to extract relevant information from a database using keywords
@@ -49,13 +49,16 @@ User stories are formatted as follows: <br>
    - In speech detection mode, the user's speech is converted into text displayed in the text box to enter messages.
    - When the on-screen button is clicked again, the system exits speech detection mode
 
+A large part of the story points in this epic are from the third user story. We are inexperience with Dialogflow, so a large part of this epic will be researching and learning how to use Dialogflow. This user story cannot be broken up into smaller stories because the high number of story points comes from a lack in skills and not the complexity of the story.
+
 **As a user I want the system to be able to respond conversationally so that it is not a simple question and answer bot.**
 1. As a: user<br>
    I want: the sytem to suggest new questions based on my recent questions<br>
    So that: I save time asking questions<br>
-   Story points: 5<br>
-   Priority: <br>
+   Story points: 30<br>
+   Priority: 1<br>
    Acceptance criteria: <br>
+   - The system suggests related questions for the user to ask after it has given an answer
    - e.g. after answering the question "Who is my lecturer?" the system will suggest the question "What is their email address?"
 2. As a: user<br>
    I want: the system's replies to have a conversational flow<br>
@@ -68,11 +71,21 @@ User stories are formatted as follows: <br>
    - e.g. user: tell me about COMP9900<br>
      system: what would you like to know?
 3. As a: user<br>
-   I want: <br>
-   So that: <br>
-   Story points: <br>
-   Priority: <br>
+   I want: the system to be able to handle unexpected phrases<br>
+   So that: the system can continue the flow of conversation<br>
+   Story points: 10<br>
+   Priority: 2<br>
    Acceptance criteria: <br>
+   - System responds even if unexpected input is given
+      - e.g. "daskljfklsadflsa"
+4. As a: user<br>
+   I want: the system to be able to handle unrelated questions<br>
+   So that: the system can continue the flow of conversation<br>
+   Story points: 10<br>
+   Priority: 2<br>
+   Acceptance criteria: <br>
+   - System responds even if question unrelated to course outline or content is asked
+      - e.g. "What is the weather like?"
 
 **As a user I want the system to answer questions based on the context of the conversation so I can converse with it like I would with a human.**
 1. As a: user<br>
