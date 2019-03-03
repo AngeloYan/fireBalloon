@@ -159,4 +159,8 @@ The sum of the story points from the 3 chosen epics is 290. UNSW expects a cours
 To summarise, we expect to be able to complete the user stories on time as we expect to spend 288 hours completing 290 hours of user stories. The 2 hours we are missing out is negligible and can be made up during the final week if necessary. We have planned to stop working on user stories 1 week before the deadline to give us time to debug our software and write our report.
 
 ## Sprints
-MVP
+Our team's sprint lengths will be 2 weeks each due to the large size of a lot of the user stories. As previously stated, the large user stories cannot be broken up into smaller ones because the large size of the user stories is not due to the actually complexity of the story, but instead due to the time it would take us to learn the technology. There are 7 weeks remaining, but as stated above we plan to finish in 6 weeks to give us 1 week to debug and write the final report. This gives us 3 sprints to complete the project and we can go into the last week if necessary.
+
+Our MVP will consist of all of the priority 1 user stories. This will take 200 story points. Going by the 12 hours a week that has been calculated above, it will take just over 4 weeks to complete (192 hours as a team over 4 weeks) but we will be aiming to complete the MVP by the end of the 4th week (2nd sprint).
+
+The rest of the stories will be completed at a rate of approximately 48 story points per week in order of priority (12 hours per person) so 96 per sprint. This will allow us to finish by the end of the 3rd sprint (290 story points in total).
