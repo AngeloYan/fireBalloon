@@ -24,3 +24,18 @@ of the project and its scale" is worth 50% of the proposal but there is no
 information on what is to be included. This is really frustrating because what
 is the point of doing the course if no one is going to teach us how to do a
 project proposal and we have to learn how to write one ourselves?
+
+Week 2 01/03/19 Had a 3 hour meeting to discuss progress on the project proposal
+because there was new information given during the lecture. An example project
+proposal was given to us which gave us a clearer idea of what direction to move
+in. Hal researched Dialogflow since the last meeting and taught the rest of us
+what he's learnt. Using this new information, we adjusted our framework to make
+better use of Dialogflow. We switched from Flask to Node.js for the server
+because at the moment it appears easier to use Dialogflow using Node.js.
+
+I had already finished most of the user stories so we took a brief look through
+it and discussed the scope of our project. For our front end our tutor wasn't
+very pleased with us for wanting to make a web app, so we decided we'd start
+with a simple web app and focus on the back end first. When the back end is
+finished, we would then integrate other front end environments to our system
+such as Facebook Messenger and Trello.
