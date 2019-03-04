@@ -1,10 +1,23 @@
-Week 1
-
+Week 1 
+20/02/2019
 Group formed. I created the Trello & GitHub accounts and joined our team. We chose our team's name which is Fire Balloon.
 We also decided to achieve project 1 and the topic that is student-tutor support system. 
 Besides, we have booked a cats room that we can have a discuss about our proposal draft next week.
 
-Week2
-
+Week 2
+25/02/2019
 We booked a cats room and had a meeting about our proposal including the software tools and the achieving goals. 
-I also wrote our notes on the whiteboard. 
+I also wrote our notes on the whiteboard. However, there are some questions we need to check with tutor.
+For example, when will we get the database that supported by professor and what is the database's format?
+We also confused about how to train the data by using machine learing.
+Overall, we made a framework of our project.
+27/02/2019
+In the lab, we discussed with tutor and then divided the work of our proposal. I was assigned to write background and aim.
+Therefore, I planed to read more essays and learn more about conversational agents.
+01/03/2019
+We had an extra meeting on Friday because we were worried about our proposal was a little behind comparing with other groups.
+This meeting really did a big progress of our proposal. Firstly, Hal shared his experiences about learning dialogflow, Hal also wrote a guide for us in Chinese. Secondly, we adjusted the framework of our project and decided to use node.js instead of flask. Besides, Angelo has already written some epics and we discussed. I also read the template of the proposal which is given by our professor. After that, Tianyu and I read the documents of dialogflow together.
+
+Week 3
+04/03/2019
+We planned to finish our proposal's draft on Monday and I integrated all team partners' work in one file. We planned to make some modification and will discuss on Wednesday before the lab.
