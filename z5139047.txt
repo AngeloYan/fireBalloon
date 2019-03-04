@@ -4,4 +4,8 @@ We talked a lot about Epics which confuse us for a long time.We collected severa
 
 week 2
 25/02/19 Group meeting. It is the first time we talked about the technical tools specificly. 
-Because I and Angelo used Flask before, we decided to use it for the server. We decided to learn dialogflow together and share our learninh experience.
+Because I and Angelo used Flask before, we decided to use it for the server. We decided to learn dialogflow together and share our learning experience.
+
+01/03/19 Group meeting. This time we shared our Dialogflow learning experience, we knew about it more clearly. We decided to use Node.js instead of Flask because it is easier to use Dialogflow. 
+About proposal, we had a clear devision of it. I and Hal wrote the technical depth of the project part. 
+We planned to finish it on Monday and give each other advices.
