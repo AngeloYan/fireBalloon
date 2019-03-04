@@ -1,0 +1,7 @@
+Week1
+Group formed and group members met to discuss how to write proposals. 
+We talked a lot about Epics which confuse us for a long time.We collected several questions to disscuss with tutor in Wednesday.
+
+week 2
+25/02/19 Group meeting. It is the first time we talked about the technical tools specificly. 
+Because I and Angelo used Flask before, we decided to use it for the server. We decided to learn dialogflow together and share our learninh experience.
