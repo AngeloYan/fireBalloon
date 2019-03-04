@@ -1,10 +1,23 @@
 Week 1
 
 Team formed.
-The first week we planed to make a draft for our proposal. 
-We finaly determined candidates of epics
-The obstacles(mainly about proposal): 1, how deep are content extraction and matching
+We created github group accounts, and choosed project 1 and second topic as our task.
+I read materials followed by given project's introduction(links). 
+Next week we plan to have a group meeting to exchange thoughts and make a draft for proposal.
+
+
+Week2
+
+This week we planed to have a meeting for starting the project and preparing for proposal.
+On Monday's meeting, We discussed possible structures and available techniques. Then we proposed some candidates of epics.
+The obstacles(mainly about proposal, discussed but unsoved): 
+                                      1, how deep can the user's questions ask to the agent about course content?
                                       2, will database be provided
                                       3, do we need to support Collaborative Learning
-the first and sencond we didn't solve from the lab hours. and we know we do not need achieve 3 by the tutor said.
-Next period we plan to do some research to work out a structure, as well as learn related knowledge and techniques 
+The first and sencond problems we didn't get helps from lab hours. Actually it's frustrating. We hope more suggestions or instructions. We knew we do not need achieve Collaborative Learning by the tutor said.
+Next period we plan to do some research to work out a clear structure, as well as learn related knowledge and techniques. Meanwhile, complete the proposal by next Wednesday.
+
+We had an extra meeting on Friday. Before that, I have read documentation of DialogFlow and related materials. Then shared what I learned to my group members on the meeting. We decided to use Node.JS, instead of flask. And I proposed a plan to solve
+how can we match user's intent with course content. But still had problem on it. Finaly we discuss and assigned tasks about proposal to each group member.
+
+I have completed the second half part of technical depth. We plan to integrate our works on next Monday.
