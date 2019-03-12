@@ -3,6 +3,7 @@
 	"version": "0.0.1",
 	"description": "my first socket.io app",
 	"dependencies": {
+		"dialogflow": "^0.8.0",
 		"express": "^4.15.2",
 		"socket.io": "^2.2.0"
 	}
