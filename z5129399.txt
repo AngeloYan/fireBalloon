@@ -31,14 +31,36 @@ I have completed the second half part of technical depth. We plan to integrate o
 
 Week3
 
-The third week I planned to read papers provided in course website, so that we could finally determine a strategy that can find a related part from extracted course content, w.r.t users questions. And I intended to construct a text preprosessing model by this week, preprocessing the raw course data.
+The third week I planned to read papers provided in course website, so that we could finally determine a strategy that 
+can find a related part from extracted course content, w.r.t users questions. And I intended to construct a text preprosessing
+model by this week, preprocessing the raw course data.
 
-In the lab hours, tutor suggested us to modify our proposal. I made a new diagram that illustrates how the agent works more specifically. The new diagram is more clear and detailed in presenting work procedure. By Friday, we intergrated our works on proposal then submitted it.
+In the lab hours, tutor suggested us to modify our proposal. I made a new diagram that illustrates how the agent works more
+specifically. The new diagram is more clear and detailed in presenting work procedure. By Friday, we intergrated our works on
+proposal then submitted it.
 
-After my research, I was inspired by two essays: 'MOOC-O-BOT: Using Cognitive Technologies to Extend Knowledge Support in MOOCs' and 'Text Retrieval by Term Co-occurrences in a Query-based Vector Space'. Therefore, I decided to introduce a IR model as the core function, which could rank the content chunks. The chunk with highest score will be presented to users. Besides, I plan to introduce a learning factor adjusted by users feedback, with which the matching acucuracy could be improved.
+After my research, I was inspired by two essays: 'MOOC-O-BOT: Using Cognitive Technologies to Extend Knowledge Support in
+MOOCs' and 'Text Retrieval by Term Co-occurrences in a Query-based Vector Space'. Therefore, I decided to introduce a IR model
+as the core function, which could rank the content chunks. The chunk with highest score will be presented to users. Besides, I
+plan to introduce a learning factor adjusted by users feedback, with which the matching acucuracy could be improved.
 
 In the last two days of this week, I completed the preprocessing model then tested it.
 
 Next week I plan to construct the Keywords Extraction model.
+
+
+
+Week4
+
+This week my task is to construct the Keywords Extraction model and test it.
+
+On the weekly meeting we clarified our respective tasks in current stage. I told my group members the interfaces of the 
+APIs (backend) and the form the data needed, so we can make sure that different components can work together successfully.
+
+I encountered a issue that the keyword extracting threshold is difficult to determine. I am going to adjust it when we have
+more data.
+
+Next week I plan to build a tentative IR model and explore a method that uses intent matching of dialogflow in a brilliant
+way, improving the performance of the IR model. 
 
 
