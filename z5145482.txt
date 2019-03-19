@@ -28,7 +28,7 @@ We planned to finish our proposal's draft on Monday and I integrated all team pa
 We will make some modification and discuss it on Wednesday before the lab.
 06/03／2019
 In this lab, tutor talked a lot with us and we need to do a lot of modification. For my part, firstly, I must add the
-references for the background. Secondly, I need to write the aim more specific. I plan to finish these work before Friday. 
+references for the background. Secondly, I need to write the aim more specificly. I plan to finish these work before Friday. 
 We also should add a picture of our framework for our project, this work was assigned to Hal.
 08/03/2019
 This day is the last day of the submission for our proposal, I sent my updated parts to Hal and Angelo did the last
@@ -47,7 +47,7 @@ We all have some progress in our own parts. For me, I chose the course COMP9444 
 Week 5
 19/03/2019
 We had a meeting for the next day's demo of our project. We talked about our schedules of our own parts and what should we do 
-for the following tasks. In my parts, next step is to classify the content in the corpus for Hal's training data.
+for the following tasks. In my parts, my next step is to classify the content in the corpus for Hal's training data.
 
 
 
