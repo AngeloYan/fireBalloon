@@ -1,0 +1,46 @@
+[
+  {
+    "id": "36bab655-9a7c-4053-bf8c-dcc7be8e2efa",
+    "data": [
+      {
+        "text": "how can i get to the course web page",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0
+  },
+  {
+    "id": "a7423064-175f-4ca6-9dd3-5e6d536ccb17",
+    "data": [
+      {
+        "text": "can I have the URL of this course",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0
+  },
+  {
+    "id": "003b68ca-2766-489c-a81b-92366cfcd518",
+    "data": [
+      {
+        "text": "what is the web page",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0
+  },
+  {
+    "id": "fcd325f3-6f65-4e76-92d6-ca8019f2c104",
+    "data": [
+      {
+        "text": "what is the address of this course?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0
+  }
+]
