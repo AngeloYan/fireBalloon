@@ -9,3 +9,9 @@ Because I and Angelo used Flask before, we decided to use it for the server. We 
 01/03/19 Group meeting. This time we shared our Dialogflow learning experience, we knew about it more clearly. We decided to use Node.js instead of Flask because it is easier to use Dialogflow. 
 About proposal, we had a clear devision of it. I and Hal wrote the technical depth of the project part. 
 We planned to finish it on Monday and give each other advices.
+
+week 3
+We finfished our proposal. Tutor gave us some advices about proposals and we updated it. I wrote the technical depth of the project part which have something unclear. I made some changes to make it better.
+
+week 4
+
