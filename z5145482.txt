@@ -26,3 +26,36 @@ Week 3
 04/03/2019
 We planned to finish our proposal's draft on Monday and I integrated all team partners' work in one file. 
 We will make some modification and discuss it on Wednesday before the lab.
+06/03／2019
+In this lab, tutor talked a lot with us and we need to do a lot of modification. For my part, firstly, I must add the
+references for the background. Secondly, I need to write the aim more specificly. I plan to finish these work before Friday. 
+We also should add a picture of our framework for our project, this work was assigned to Hal.
+08/03/2019
+This day is the last day of the submission for our proposal, I sent my updated parts to Hal and Angelo did the last
+integration of our proposal. He really did a great work.
+
+Week 4
+12/03/2019
+Aftering submitting our proposal, we had a meeting for the next step of our project. 
+We assigned some specific tasks to everyone for achieving our project. 
+My mission is to choose a specific course and learn to use the web scraper to extract all the content of this course. 
+After that, I should learn how to construct a corpus. I plan to do more research of these parts and send the corpus to Hal
+as soon as I can.
+13/03/2019
+We all have some progress in our own parts. For me, I chose the course COMP9444 and started to extract the content.
+
+Week 5
+19/03/2019
+We had a meeting for the next day's demo of our project. We talked about our schedules of our own parts and what should we do 
+for the following tasks. In my parts, my next step is to classify the content in the corpus for Hal's training data.
+
+
+
+
+
+
+
+
+
+
+
