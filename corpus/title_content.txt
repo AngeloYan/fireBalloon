@@ -63,3 +63,63 @@ Weight Decay
 Momentum
 Conjugate Gradients
 Natural Gradients (Amari, 1995)
+Outline
+Symmetries
+Controlled Nonlinearity
+Limitations of Two-Layer Neural Networks
+Adding Hidden Layers
+Vanishing / Exploding Gradients
+Solutions to Vanishing Gradients
+Activation Functions
+Dropout
+Ensembling
+Bagging
+Dropout as an Implicit Ensemble
+Convolutional Networks
+Hubel and Weisel – Visual Cortex
+Convolutional Network Components
+Convolutional Network Architecture
+Softmax
+Convolutional Neural Networks
+Example: LeNet
+Example: LeNet trained on MNIST
+Convolution with Zero Padding
+Example: AlexNet (2012)
+Stride
+Stride Dimensions
+Stride with Zero Padding
+Example: AlexNet Conv Layer 1
+Overlapping Pooling
+Outline
+MNIST Handwritten Digit Dataset
+CIFAR Image Dataset
+ImageNet LSVRC Dataset
+Image Processing Tasks
+LeNet trained on MNIST
+ImageNet Architectures
+AlexNet Architecture
+AlexNet Details
+Enhancements
+Data Augmentation
+Convolution Kernels
+Dealing with Deep Networks
+Statistics Example: Coin Tossing
+Residual Networks
+Dense Networks
+Neural Texture Synthesis
+References
+Outline
+Processing Temporal Sequences
+Sliding Window
+NetTalk Task
+NetTalk
+Simple Recurrent Network (Elman, 1990)
+Back Propagation Through Time
+Other Recurrent Network Architectures
+Task: Formal Language Recognition
+Dynamical Recognizers
+Task: Formal Language Prediction
+Counting by Spiralling
+Long Range Dependencies
+Long Short Term Memory
+Simple Recurrent Network
