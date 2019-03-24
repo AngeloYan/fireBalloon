@@ -44,6 +44,7 @@ then integrate other front end environments to our system such as Facebook
 Messenger and Trello.
 
 Week 3
+
 06/03/19
 Jia compiled our sections for the proposal into a single document. We went over
 what we needed to change with the tutor.
@@ -51,3 +52,42 @@ what we needed to change with the tutor.
 08/03/19
 We each made the necessary changes to our sections and I went over the whole
 document fixing up typos and formatting before submitting it.
+
+Week 4
+
+11/03/19
+What was planned?
+Set up web server and client.
+
+What was finished?
+I finished setting up a basic web server and client. The server was set up using
+Express and Node.JS, and the client was made using HTML, CSS, and JS.
+
+Main issues
+I'm experienced with modifying web servers and clients but am not experience
+with setting them up. I did not know how to implement a RESTful API so I got
+around this by using the Socket.IO for communication between the client and
+server.
+
+What was not finished?
+
+What is planned for next period?
+Connect front end server to Dialogflow and backend.
+
+Week 5
+19/03/19
+What was planned?
+Connect front end server to Dialogflow and backend.
+
+What was finished?
+Found documentation on how to use Dialogflow API through Node.JS.
+
+Main issues
+Lack of experience in web development. Currently looking for examples of
+applications that has used the API.
+
+What was not finished?
+Currently still not able to connect front end with Dialogflow.
+
+What is planned for next period?
+Connect front end server to Dialogflow and backend.
