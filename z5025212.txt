@@ -105,7 +105,7 @@ Dialogflow can receive request from front end and can send response to server.
 Main issues
 Unable to pass response from server to client. This is because JavaScript is
 asynchronous and the client does not wait for a response from the server.
-Instead, the client just believes the response is null.
+Instead, the client just believes the response is undefined.
 
 What was not finished?
 Pass Dialogflow response from web server to client.
