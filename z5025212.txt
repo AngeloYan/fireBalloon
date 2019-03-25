@@ -75,6 +75,7 @@ What is planned for next period?
 Connect front end server to Dialogflow and backend.
 
 Week 5
+
 19/03/19
 What was planned?
 Connect front end server to Dialogflow and backend.
@@ -91,3 +92,23 @@ Currently still not able to connect front end with Dialogflow.
 
 What is planned for next period?
 Connect front end server to Dialogflow and backend.
+
+Week 6
+
+25/03/19
+What was planned?
+Connect front end server to Dialogflow and backend.
+
+What was finished?
+Dialogflow can receive request from front end and can send response to server.
+
+Main issues
+Unable to pass response from server to client. This is because JavaScript is
+asynchronous and the client does not wait for a response from the server.
+Instead, the client just believes the response is null.
+
+What was not finished?
+Pass Dialogflow response from web server to client.
+
+What is planned for next period?
+Pass Dialogflow response from web server to client.
