@@ -1,15 +1,15 @@
 const DialogFlow = require('dialogflow');
 
-const projectId = 'fire-balloon-1552364979829';
+const projectId = 'newagent-c66fe';
 const sessionId = '123456';
 const languageCode = 'en';
 
 const config = {
     credentials: {
         // private_key: process.env.DIALOGFLOW_PRIVATE_KEY,
-        private_key: "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQClWnm/2aQWXZjv\nCITNf7bZkT+Y1iGEBBQag2kg8X+XSHDC/APk0El5rSIejOZXOVQmLdTOabzyuUfJ\n+Jv4ZWoXEAGTaa381MZpovAKqb11rkWq2l7d7cl9uKVwh6A/bTzQY44PD5ircNAS\nwQGTDcVWg2aeQTlQ+ez9bVvNMjG6eOPCrW7xok7B4m7V2zof8SxSHMkk92VIQoE/\n9Zr9ZoBDswlE1CSbquk1gu+qjjwYyNvA17923sskwGJ/tEp+bC4rN2IeoZFZ7/oc\nZJPpQY5yccOySUapWFNhmUTNaPD+IQSHX1cDvjOn7oqjXFFUtSIIsNEVkbG5o3Uv\nUvSOUL2jAgMBAAECggEAB5l05wBVrkF2+eVmVRt9h9pJFfkhaTPWyLEpb74powZN\nSGjUtPttpQ3z93t6Sp/z4h1RHnt1l6I0TnACmxPuIEk4CVJeELSmucwnRBYxAuuT\ngBqxKXn4PLLzx4w0LTYUCW/J459P4PE6XuJH9D45x5Qab0OIItSZs7wG8BNSfcNl\nkJhM9R4T3m9wiF3kQRmB2Tse/D75MlSYAYclpCyR2f8E79/W+rb55d4Msz308Nxg\nFGjdghvgoBLesSyFhbzi4434uoOkkU7QFztvx7U2+gBRztcU+cYVt08IZtu5V2Bw\nNXucV3Ud4hI2tacd+C0WjaoZxRLlcssiy3OPDzjrwQKBgQDkW0RyqMYlo78LPyzt\nYn0RZEFgJuheCRc/U6l42hudfWJCaNE+sZKZ2RF9DAAeCnBXnj1yNJlU9DFclqsg\nzVvTbb/aXWtxJKjOXioRaDQYywRwOS4u0mSy3F2ZKIzBqu6Xi4maSWyzR0ARLhdF\nHUtfJnPSz0SYDRDdXLoOfc2x2QKBgQC5XsCREovX0gr/pyItjFj/KJcOnP/yZcYW\nOeIh2we9KNV1BRUDnW9Kh5/OTWpnlz5CHRU1jESModAQGxQnHqurRr44f+erhDRa\nfFBaHrc32HFsBcd5reUNMYk1gzEpSCqkPHH4TWclVXRFyyCz4ijvL7JVCbqyhL7+\nnVyCjk3B2wKBgFOg/QtEtfRY6IE07L4vAICbB7ov5Y9yotnlSL5imhRuM8sAWgks\nvPSs41O5Tl2yEvxzjitCChlrqJww7ZEAxC1FFyrgZZW1CEEziRKA5/tgdkqnFju9\nf3VlcL3DdPEEKYbEamtfkniBknv4NjtwhAbfrTE6CPPqbQ+0gssF1YvZAoGBAKY3\nNTqgQ67RE7WrmvT2rPKW5eRfmQ00fwt8+azb5rOSAt08IlysdZeBxyTIvAmJT3Ue\n+N6cGPd1PMjETyzIzqv08ipdXlGoaP1eDPrSIf28Ye+3uub7q7BJ47uNGK7om/vK\ni3NXjI6ocmsGuhsyRvw6a5De+X6Lk2thlQsoKMcTAoGBAJfGHTCa5drJItFZwqSq\nDkIYIolUC5xHW3K+PcX/r8jg9NljFP5rPGb6l6MgB/TpTkmkIHTCpHAHAspuqCjt\nuUvYubxkvlxIKfy5P+x27OKrqaXoP13vbpI7Cv5zPLodi9I5YfsdWaD8B5M91+uH\nk267m3I03zZQN75vp8XBK7Az\n-----END PRIVATE KEY-----\n",
+        private_key: "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCnbpvGU4KY/qr7\nbfIJoxzcfxSxkMjAYOW3J0Rw4w0jB4wBIi/Cm0PuDAIOmGuVkgIeYqtoXWBlxhuJ\nYWnoppkSQFTN7RJ94lsSa6dJowj+jsYJGo5wZ8KdaTP4PDpMsWmS1wr21/erRXB1\n0eniYz4B9TzSbkQdqJYMAguvvLjKcKqrX2a6LrgIYd9uSKCPp0BDQZxWXDMyQBuF\nSGCAcmECEWscPa2Fr0IhB1+TxGPf15B0rEJNAL3zUn+9KcItTf+2cn7JfZASWEic\nzZ9nUA8cZ/Jv1g3qg1IqEeNfv4WD2lyJbnqUr7k8MSO8JUEM6O6+t2640jn2TR3x\nnYWOp3GDAgMBAAECggEAIGFlUflDmBgkdCTCuvdnNQOEuoSANqhmtMGs3FIk78Hd\nYzi72NyTSh3bZfw3TkFjFIJLmQ75/iTOnYaP53UUxHFZlUvEmEDnEQxt2XFk42o0\nRX1zz6xZeHzolpj7Q2rKOqJJFg0VcnOm+LpEi8paqyFFBoNZvAynHCJnJTEP4eKR\nB5tc7B3rT4OohNkeK9ZqK9Iuql0lX08BaqjmzZuh9EUQzBPQS0CIPO4pWuvd4gYu\ngBEHmcPcFnmEEiMCnboKExprbFAYmqwNhYVo/gpFixndIub2Ny2EAL8yX/nUAyW8\n9KkefxeECOxRyCaN+hdews6IsMkR0ZaxJRrUjzEuAQKBgQDaANg3Ocqp4hqRTEQ5\nVOkxpuWWLCNF1q1/bTdutA35cGsB2H3rp/JcjBTAcLP3SIQbjwOrGTte8Y4Ick0j\n91K3aE1LI127010rjO3YkmVH7g2LZTQTqNTkIJmP/EPkJcnKmqpeT2SJ8/9Z+HtF\n/06f0Ye9Z4UZ0tjb9e9ouUJWAQKBgQDEnU+E6MmfX+84jRglfFqfOVTaoyGx1cNf\nk82TIUktJenPiNWNtqh/OqJeezv0dJWGHvrfwfneaMun00HqiNIXsiAumD91/IlL\nLsdL4I5R4jAvDqucEf/N11BzzY8Uz09frphrPaDXjZZ4oSDvNtHoCL2Vem3npDI5\nxEHZDGtvgwKBgANqjfjXlABzhZ0PR+ZqGTlo9yISUP8wLQnZKUw30Bw/kb22qcp+\nmEKxA0Y8veU7Iq7X3+PXgmGrgWFKgUD2CDrNjKCHzlk6J7SeAcAqEyI8bcPocxd3\nxtZIWH+0IVA6812UbOULc3Th+Pds+GmRZacFfo4OSDyuXC2ePgEzHgIBAoGAbcHH\nh1GQZFjgqTgSl7KAwEv384mHoMfNJgjThOPa/sogaMthM5gZHdU0mPvAb2m5osKe\nl9SoUSE9NzW2oV+5sKKuVnSFUK8mUYMOnGwB5vIWpd5RrHFb1KPy9IJ28k38aFSG\nH6+qn0oaCsMgKIn4ycg/VTegLOS7aQYHIExPmVMCgYAuhwjBZdQSvRur7hAedMR6\nh48gFFZdOHm4VZJujaDf112UDfcHErDLfMERawNL1k/tCD8na13ly/l060a6abJ6\ne4ceFtHAD8rHuVhW3Tizx/Z9FX4yRJQ1OXpr8qRJdINUaY5AGkH1MOASv/suBZiK\nDQe4R3mZThX23YUbo7dtng==\n-----END PRIVATE KEY-----\n",
         // client_email: process.env.DIALOGFLOW_CLIENT_EMAIL,
-        client_email: "dialogflow-aeaxio@fire-balloon-1552364979829.iam.gserviceaccount.com",
+        client_email: "dialogflow-vwexjv@newagent-c66fe.iam.gserviceaccount.com",
     },
 };
 
@@ -28,17 +28,19 @@ const processMessage = message => {
         },
     };
 
-    sessionClient
-        .detectIntent(request)
-        .then(responses => {
-            console.log(responses);
-            const result = responses[0].queryResult;
-            console.log(result.fulfillmentText);
-            return result.fulfillmentText;
-        })
-        .catch(err => {
-            console.error('ERROR:', err);
-        });
+    return new Promise(function (resolve, reject) {
+        sessionClient
+            .detectIntent(request)
+            .then(responses => {
+                console.log(responses);
+                const result = responses[0].queryResult;
+                console.log(result.fulfillmentText);
+                resolve(result.fulfillmentText);
+            })
+            .catch(err => {
+                console.error('ERROR:', err);
+            });
+    });
 };
 
 module.exports = processMessage;
