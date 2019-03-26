@@ -100,7 +100,7 @@ What was planned?
 Connect front end server to Dialogflow and backend.
 
 What was finished?
-Dialogflow can receive request from front end and can send response to server.
+Dialogflow can receive request from front end and can send response back to web server.
 
 Main issues
 Unable to pass response from server to client. This is because JavaScript is
@@ -112,3 +112,24 @@ Pass Dialogflow response from web server to client.
 
 What is planned for next period?
 Pass Dialogflow response from web server to client.
+
+26/03/19
+What was planned?
+Pass Dialogflow response from web server to client.
+
+What was finished?
+Pass Dialogflow response from web server to client.
+Hosted app on Heroku.
+
+Main issues
+The asynchronous function issue was difficult to solve because our team has no
+members with experience in methods of handling this (e.g. callbacks and
+promises).
+Our file heirarchy was not suitable for Heroku so that has to be modified. The
+web app files used to be in their own folder but now has to be stored in root.
+
+What was not finished?
+Nothing
+
+What is planned for next period?
+Implement voice recognition on the web interface.
