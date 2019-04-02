@@ -44,6 +44,7 @@
 
     #messages li {
       padding: 5px 10px;
+      white-space: pre-wrap;
     }
 
     #messages li:nth-child(odd) {
@@ -64,7 +65,7 @@
         return false;
       });
       socket.on('chat message', function (msg) {
-        $('#messages').append($('<li>').text("1</br>2"));
+        $('#messages').append($('<li>').text(msg));
       });
     });
   </script>
