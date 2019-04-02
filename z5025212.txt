@@ -133,3 +133,23 @@ Nothing
 
 What is planned for next period?
 Implement voice recognition on the web interface.
+
+Weel 7
+
+02/04/19
+What was planned?
+Implement voice recognition on the web interface.
+
+What was finished?
+Fixed display but in user interface.
+
+Main issues
+Lack of time this week due to other assessments.
+
+What was not finished?
+Implement voice recognition on the web interface.
+
+What is planned for next period?
+Implement Facebook Messenger integration.
+Implementing voice recognitionon the web interface is not urgent if voice works
+on other platforms such as Messenger or Google Assistant.
