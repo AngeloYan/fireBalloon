@@ -32,18 +32,18 @@ What is planned for next period?
 week 5
 
 What was planned?
-
+Building dialogflow python client to use other APIs and easier to link frontend.
 
 What was finished?
-
+I finished to build a python client which can receive the questions and return our own answers.
 
 Main issues
-
+Finding a issue about implementing Dialogflow to other platforms by python client. It is not easy to deploy to other platforms by python client.
 
 What was not finished?
 
 What is planned for next period?
-
+Using webhook to deploy to other platforms.
 
 week 6
 
