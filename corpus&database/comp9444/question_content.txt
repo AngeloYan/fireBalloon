@@ -63,3 +63,63 @@ How to use weight decay?
 How to use momentum?
 What is the definition of conjugate gradients?
 What is the definition of natural gradients (Amari, 1995)?
+What is the outline of geometry of hidden units?
+What is the definition of symmetries?
+What is the definition of controlled nonlinearity?
+What are the limitations of two-layer neural networks and is there any example?
+How to add hidden layers?
+How to vanish / explode gradients?
+What are the solutions to vanishing gradients?
+What are the definition of activation functions?
+What is the definition of dropout?
+What is the definition of ensembling?
+What is the definition of bagging?
+How dropout as an implicit ensemble?
+What is the definition of convolutional network?
+What is the definition of hubel and weisel – visual cortex?
+What is the definition of convolutional network components?
+What is the definition of Convolutional Network Architecture?
+What is the definition of softmax?
+How does the convolutional neural networks work?
+What is the example of LeNet?
+What is the example of LeNet trained on MNIST?
+How to do convolution with zero padding?
+What is the example of AlexNet (2012)?
+What is the definition of stride?
+How to stride dimensions?
+How to stride with zero padding?
+What is the example of AlexNet Conv Layer 1?
+What is the definition of overlapping pooling?
+What is the outline of image processing?
+What is the definition of MNIST Handwritten Digit Dataset?
+What is the definition of CIFAR Image Dataset?
+What is the definition of ImageNet LSVRC Dataset?
+What are the definitions of Image Processing Tasks?
+How does LeNet train on MNIST?
+What is the history of ImageNet Architectures?
+What is the definition of AlexNet Architecture?
+What is the definition of AlexNet Details?
+What is the definition of enhancements?
+What is the definition of data augmentation?
+What is the definition of convolution kernels?
+How to deal with deep networks?
+What is the statistics example of coin tossing?
+What is the definition of residual networks?
+What is the definition of Dense Networks?
+What is the definition of neural texture synthesis?
+What is the references of image processing?
+What is the outline of recurrent networks?
+What is the definition of processing temporal sequences?
+What is the definition of sliding window?
+What is the definition of NetTalk Task?
+What is the definition of NetTalk?
+What is the definition of simple recurrent network (Elman, 1990)?
+What is the definition of back propagation through time?
+What is the definition of other recurrent network architectures?
+What is the task of Formal Language Recognition?
+What is the definition of Dynamical Recognizers?
+What is the task of Formal Language Prediction?
+How to count by Spiralling?
+What is the definition of long range dependencies? 
+What is the resource of long short term memory?
+What is the definition of simple recurrent network?
