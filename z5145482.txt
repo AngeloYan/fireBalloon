@@ -8,7 +8,7 @@ Week 2
 25/02/2019
 We booked a cats room and had a meeting about our proposal including the software tools and the achieving goals. 
 I also wrote our notes on the whiteboard. However, there are some questions we need to check with tutor.
-For example, when will we get the database that supported by professor and what is the database's format?
+For example, when will we get the database that supported by professor and what is the format of the given data?
 We also confused about how to train the data by using machine learing.
 Overall, we made a framework of our project.
 27/02/2019
@@ -48,7 +48,20 @@ Week 5
 19/03/2019
 We had a meeting for the next day's demo of our project. We talked about our schedules of our own parts and what should we do 
 for the following tasks. In my parts, my next step is to classify the content in the corpus for Hal's training data.
+20/03/2019
+In the lab time, we know that we are far from what we want to achieve. My job is to work with the data and make the data more
+classifiable and clear as I can.
 
+Week 6
+26/03/2019
+Group meeting before lab, everyone did a lot since last week. Now, it is the time for me to create a database and upload all the data to the database.
+27/03/2019
+In the lab, tutor told us we need to do more course as we can, it is not enough for only one course. Therefore, we need more courses, Angelo and I decided to use the COMP9414 and COMP1531. For my part, I will extract all the content of these two courses.
+
+Week 7
+03/04/2019
+In the lab, tutor told me that the way I extract data does not make sense, I need to change my way of extracting data.
+By the way, we need to start to write the report draft from this week.
 
 
 
