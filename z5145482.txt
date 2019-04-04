@@ -49,14 +49,17 @@ Week 5
 We had a meeting for the next day's demo of our project. We talked about our schedules of our own parts and what should we do 
 for the following tasks. In my parts, my next step is to classify the content in the corpus for Hal's training data.
 20/03/2019
-In the lab time, we know that we are far from what we want to achieve. My job is to work with the data and make the data more
-classifiable and clear as I can.
+In the lab time, we know that we are far from what we want to achieve. My job is to work with the data and make the data 
+more classifiable and clear as I can.
 
 Week 6
 26/03/2019
-Group meeting before lab, everyone did a lot since last week. Now, it is the time for me to create a database and upload all the data to the database.
+Group meeting before lab, everyone did a lot since last week. Now, it is the time for me to create a database and upload 
+all the data to the database.
 27/03/2019
-In the lab, tutor told us we need to do more course as we can, it is not enough for only one course. Therefore, we need more courses, Angelo and I decided to use the COMP9414 and COMP1531. For my part, I will extract all the content of these two courses.
+In the lab, tutor told us we need to do more course as we can, it is not enough for only one course. Therefore, we need 
+more courses, Angelo and I decided to use the COMP9414 and COMP1531. For my part, I will extract all the content of these
+two courses.
 
 Week 7
 03/04/2019
