@@ -46,8 +46,8 @@ We all have some progress in our own parts. For me, I chose the course COMP9444 
 
 Week 5
 19/03/2019
-We had a meeting for the next day's demo of our project. We talked about our schedules of our own parts and what should we do 
-for the following tasks. In my parts, my next step is to classify the content in the corpus for Hal's training data.
+We had a meeting for the next day's demo of our project. We talked about our schedules of our own parts and what should we 
+do for the following tasks. In my parts, my next step is to classify the content in the corpus for Hal's training data.
 20/03/2019
 In the lab time, we know that we are far from what we want to achieve. My job is to work with the data and make the data 
 more classifiable and clear as I can.
