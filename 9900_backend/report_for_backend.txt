@@ -11,11 +11,13 @@ B. Keyword Extraction
 Another is to extract some words that have more relative importance from chunks. This is also used for queries,
 which improves efficience of following compute. We use TF.IDF to evaluate the importance of a word. Term frequency 
 provides us with the importance of a word within a chunk. Meanwhile, long term frequency is applied for properly 
-reducing difference among words. Moreover, our approach use inverses document frequency to make rare terms 
-informative than frequent terms.
+reducing difference among words. Moreover, our approach use inverses document frequency to make sure that rare terms 
+are more informative than frequent terms within all chunks.
 
   In our approach, data from content database firstly is preprocessed using tokenization, normalization, 
 lemmatization and stemming. Then those preprocessed chunks and headings are treated as documents and constitute 
 the corpus for our system. Terms with the tf.idf more than 0.15 will be kept intended for answer. Those documents 
-and their kept terms are intended for answer retrieved in the following work.
+and their kept terms are intended for answer retrieval in the following work.
+
+C. Information Retrieval
 
