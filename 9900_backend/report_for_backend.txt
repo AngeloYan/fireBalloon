@@ -7,5 +7,15 @@ In addition, these headings are also stored in our Database to help our system f
 to some direct questions.
 
 B. Keyword Extraction
-  Keyword Extraxtion model works in two steps. One is to constitute 
+  Keyword Extraxtion model works in two steps. One is to construct a corpus using data from content Database.
+Another is to extract some words that have more relative importance from chunks. This is also used for queries,
+which improves efficience of following compute. We use TF.IDF to evaluate the importance of a word. Term frequency 
+provides us with the importance of a word within a chunk. Meanwhile, long term frequency is applied for properly 
+reducing difference among words. Moreover, our approach use inverses document frequency to make rare terms 
+informative than frequent terms.
+
+  In our approach, data from content database firstly is preprocessed using tokenization, normalization, 
+lemmatization and stemming. Then those preprocessed chunks and headings are treated as documents and constitute 
+the corpus for our system. Terms with the tf.idf more than 0.15 will be kept intended for answer. Those documents 
+and their kept terms are intended for answer retrieved in the following work.
 
