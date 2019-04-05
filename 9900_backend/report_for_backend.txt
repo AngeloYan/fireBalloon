@@ -21,3 +21,22 @@ and their kept terms are intended for answer retrieval in the following work.
 
 C. Information Retrieval
 
+  Queries related to course content, identified by Dialogflow, will be passed to our information retrieval model.
+Others will be answered as general questions and our agent will return some presupposed or default information
+to users. Those content-related queries will be preprocessed firstly and then the system also extracted keywords
+using our keyword extraction model. An extra restriction is that keywords must be in our term-dictionary of our 
+corpus.
+
+  Each document, including headings and content, is now represented by a real-valued vector of tf.idf weights
+during the process of retrieval. The query, which is waiting for searching an answer, is treated as a vector 
+now, as well. Then we evaluate the cosine distance between each document and the query. Cosine distance is a 
+effective method to commute the similarity of two vectors. It more considers the distribution of terms rather 
+than length of vectors. In practice, our system apply L2 normalization to weight of terms. The whole compute is 
+mathematically given by equation below:
+
+Score(vector_q, vector_c) = sum(q_i * c_i * theta_i for i in vector) / sqrt(sum(square(q_i) for i in vector)) * sqrt(sum(square(c_i) for i in vector))
+
+Finally, two or three data chunks with the highest cosine score will be returned to the user, as the answer of 
+this query.
+
+
