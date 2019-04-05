@@ -1,3 +1,11 @@
 Methodology
 
+A. Content Database
+  Our content Database consists of chunks of data from course lecture notes. A chunk, which can be returned
+to the user as a query's answer, is a piece of content under a specific heading topic in lecture notes.
+In addition, these headings are also stored in our Database to help our system find answers with respective
+to some direct questions.
+
+B. Keyword Extraction
+  Keyword Extraxtion model works in two steps. One is to constitute 
 
