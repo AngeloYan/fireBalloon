@@ -20,7 +20,6 @@ the corpus for our system. Terms with the tf.idf more than 0.15 will be kept int
 and their kept terms are intended for answer retrieval in the following work.
 
 C. Information Retrieval
-
   Queries related to course content, identified by Dialogflow, will be passed to our information retrieval model.
 Others will be answered as general questions and our agent will return some presupposed or default information
 to users. Those content-related queries will be preprocessed firstly and then the system also extracted keywords
@@ -38,5 +37,23 @@ Score(vector_q, vector_c) = sum(q_i * c_i * theta_i for i in vector) / sqrt(sum(
 
 Finally, two or three data chunks with the highest cosine score will be returned to the user, as the answer of 
 this query.
+
+D. Learning Factor
+  The above equation has a learning factor theta. It is designed for improving the system performance through
+users' feedback. Our system always return several suggested answers to users in the order of score between 
+chunks and a certain query. However, as the PART C mentioned, we also treat heading as a chunk. Those headings
+are more likely to gain a higher score than content chunks. The reason why we did it is that we found most users'
+queries are direct. The answers to those direct questions tend to occur in lecture notes with a specific 
+heading. Hence, adding headings, as a chunk, to our corpus is a effective method to improve the quality of
+responses. However, there still some queries not only in the terms of heading, but also some key terms in 
+course-content chunks. The answers to those queries may successfully be returned to users, but they are more 
+likely to be as second or third suggested answer. To provide more intelligent experience to users, we tend to 
+improve our system through requesting a feedback for each searched result from users, if the actually most related
+answer is not the first suggested answer.
+
+  By default, all the learning factors of each term is set to 1. A learning factor will increase by a small value, 
+  if user chooses the second or third answer as the best one. Affected terms includes all common keyword between 
+  this chunk and the query. This ensures that after some times of learning, the correct answer may appear on 
+  first position.
 
 
