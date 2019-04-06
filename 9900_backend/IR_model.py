@@ -119,6 +119,7 @@ def ir_model(query):
 #            'Suggested Answer2:\n' + answer2 + '\n\n' +\
 #            'Suggested Answer3:\n' + answer3 + '\n\n' +\
 #            'Suggested Answer4:\n' + answer4
+    answer = answer + 'If one of suggested answers you think is the best, could you please give me a short feedback?\n'
             
     return answer
 
