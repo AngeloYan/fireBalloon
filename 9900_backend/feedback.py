@@ -1,0 +1,45 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Sat Apr  6 20:10:40 2019
+
+@author: hal
+"""
+
+from load_data import load_data
+import numpy as np
+import re
+
+
+def updata(feedback):
+    feedback = feedback
+    
+    result_index = load_data('result_index')
+    key = [str(x) for x in result_index]
+    
+    corpus_sorted, features, idf, vocabulary, length_corpus, chunks_corpus_raw, title_corpus_raw, learning_factor = load_data('corpus_data')
+    dic_query_tfidf = load_data('query_data')
+    
+    feedback = re.sub('[^0-9]', '', feedback)
+    if feedback in key:
+        if feedback == '1':
+            return 'Thanks for your feedback. Do you have other questions?'
+        else:
+            feedback = int(feedback)
+            update_chunk_index = result_index[feedback]
+            updata_chunk = learning_factor[update_chunk_index]
+            #whcih is a dict
+            for x in dic_query_tfidf:
+                if x in updata_chunk:
+                    updata_chunk[x] = updata_chunk[x] * (1 + dic_query_tfidf[x])
+            store = [corpus_sorted, features, idf, vocabulary, length_corpus, chunks_corpus_raw, title_corpus_raw, learning_factor]
+            store = np.array(store)
+            np.save('corpus_data.npy',store)
+            return 'Thanks for your feedback. Do you have other questions?'
+            
+            
+            
+            
+    else:
+        return 'Sorry, your input of feedback is invalid. Do you want to try again or do you have another question about this course?'
+    
