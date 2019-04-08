@@ -1,6 +1,8 @@
 
 from flask import Flask, jsonify, make_response, request
 from IR_model import ir_model
+from feedback import update
+from keywords_extraction import keywords_extracted_tfidf
 import requests
 import json
 app = Flask(__name__)
@@ -10,9 +12,9 @@ app = Flask(__name__)
 # headers = {'content-type':'application/json'}
 # url="http://127.0.0.1:5050/register"
 
-l1=['comp9444','time1','place1','web1']
-l2=['comp9414','time2','place2','web2']
-l3=['comp1531','time3','place3','web3']
+l1=['comp9444','lecture1','building1',' http://www.cse.unsw.edu.au/~cs9444']
+l2=['comp9414','lecture2','building2',' http://www.cse.unsw.edu.au/~cs9414']
+l3=['comp1531','lecture3','building3',' http://www.cse.unsw.edu.au/~cs1531']
 obj_1=[l1,l2,l3]
 
 intent_1={}
@@ -21,9 +23,9 @@ def int():
     for i in obj_1:
         for j in i:
             intent_1[j]='obj'
-    intent_1['Time'] = 'int'
-    intent_1['Place'] = 'int'
-    intent_1['Web'] = 'int'
+    intent_1['time'] = 'int'
+    intent_1['place'] = 'int'
+    intent_1['web'] = 'int'
 
 
 @app.route('/webhook', methods=['POST'])
@@ -42,17 +44,26 @@ def webhook():
     intent= req.get('queryResult').get('intent').get('displayName')
 
 
-    # if intent=='Default Fallback Intent':
+    if intent=='Default Fallback Intent':
+
+        ans=ir_model(query)
     #
-    #     ans=ir_model(query)
-    #
+    if intent == 'place' or 'timetable' or 'course web site':
+        ans = context(query)
+
+    if intent == 'feedback':
+        ans = update(query)
+
+    if intent == 'Default Welcome Intent':
+        ans = keywords_extracted_tfidf(query)
+
 
 
     # print(ans)
     print(query)
     # print(context)
     print(para)
-    ans = context(query)
+
 
     # Check if the request is for the translate action
     # if action == 'translate.text':
@@ -107,11 +118,11 @@ def context(query):
     for i in obj_1:
         for j in i:
             if j == save[1]:
-                if save[0] == 'Time':
+                if save[0] == 'time':
                     return i[1]
-                elif save[0] == 'Place':
+                elif save[0] == 'place':
                     return i[2]
-                elif save[0] == 'Web':
+                elif save[0] == 'web':
                     return i[3]
 
 
