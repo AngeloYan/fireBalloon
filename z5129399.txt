@@ -64,3 +64,24 @@ Next week I plan to build a tentative IR model and explore a method that uses in
 way, improving the performance of the IR model. 
 
 
+
+Week5
+
+1. What was planned?
+Construct IR_model and do some research on how to introduce a learning factor that makes agent more intelligent. 
+
+2. What was finished?
+Both of two tasks planned.
+
+3. What were main issues?
+I met a problem that how to store previously constructed data and learning factor. I planned to store them using 
+database system, however in practice it slowed system's speed too much.
+
+4. What was not finished?
+No.
+
+5. What is planned for next period?
+Complete learning module and intergrate current works together with my group members.
+
+
+
