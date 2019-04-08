@@ -11,7 +11,7 @@ import numpy as np
 import re
 
 
-def updata(feedback):
+def update(feedback):
     feedback = feedback
     
     result_index = load_data('result_index')
@@ -27,11 +27,11 @@ def updata(feedback):
         else:
             feedback = int(feedback)
             update_chunk_index = result_index[feedback]
-            updata_chunk = learning_factor[update_chunk_index]
+            update_chunk = learning_factor[update_chunk_index]
             #whcih is a dict
             for x in dic_query_tfidf:
-                if x in updata_chunk:
-                    updata_chunk[x] = updata_chunk[x] * (1 + dic_query_tfidf[x])
+                if x in update_chunk:
+                    update_chunk[x] = update_chunk[x] * (1 + dic_query_tfidf[x])
             store = [corpus_sorted, features, idf, vocabulary, length_corpus, chunks_corpus_raw, title_corpus_raw, learning_factor]
             store = np.array(store)
             np.save('corpus_data.npy',store)
