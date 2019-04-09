@@ -6,6 +6,14 @@
 
 body {
     font: 13px Helvetica, Arial;
+    display: flex;
+    justify-content: center;
+}
+
+#chatWindow {
+    width: 50%;
+    height: 100vh;
+    outline: 5px solid black;
 }
 
 form {
@@ -13,7 +21,7 @@ form {
     padding: 3px;
     position: fixed;
     bottom: 0;
-    width: 100%;
+    width: 50%;
 }
 
 form input {
