@@ -12,9 +12,9 @@ app = Flask(__name__)
 # headers = {'content-type':'application/json'}
 # url="http://127.0.0.1:5050/register"
 
-l1=['comp9444','lecture1','building1',' http://www.cse.unsw.edu.au/~cs9444']
-l2=['comp9414','lecture2','building2',' http://www.cse.unsw.edu.au/~cs9414']
-l3=['comp1531','lecture3','building3',' http://www.cse.unsw.edu.au/~cs1531']
+l1=['comp9444','Monday 6-9pm, Weeks 1-9,11-13 ','Central Lecture Block 7 ',' http://www.cse.unsw.edu.au/~cs9444']
+l2=['comp9414','Wed 10:00 - 13:00 (Weeks:11), Fri 10:00 - 13:00 (Weeks:1-8,10)','Sir John Clancy Auditorium (K-C24-G17)',' http://www.cse.unsw.edu.au/~cs9414']
+l3=['comp1531','Tue 16:00 - 18:00 (Weeks:1-10), Wed 14:00 - 16:00 (Weeks:1-10)','Keith Burrows Theatre (K-J14-G5)',' http://www.cse.unsw.edu.au/~cs1531']
 obj_1=[l1,l2,l3]
 
 intent_1={}
@@ -44,22 +44,32 @@ def webhook():
     intent= req.get('queryResult').get('intent').get('displayName')
 
 
-    if intent=='Default Fallback Intent':
+    if intent == 'Default Fallback Intent':
 
-        ans=ir_model(query)
-    #
-    if intent == 'place' or 'timetable' or 'course web site':
-        ans = context(query)
+        ans1=ir_model(query)
+        ans1 = {'fulfillmentText': ans1}
+        return make_response(jsonify(ans1))
+
+
 
     if intent == 'feedback':
-        ans = update(query)
+        ans3 = update(query)
+        ans3 = {'fulfillmentText': ans3}
+        return make_response(jsonify(ans3))
 
     if intent == 'Default Welcome Intent':
-        ans = keywords_extracted_tfidf(query)
+        ans4 = keywords_extracted_tfidf()
+        ans4 = {'fulfillmentText': ans4}
+        return make_response(jsonify(ans4))
+
+    if intent == 'place' or 'timetable' or 'course web site':
+        ans2 = context(query)
+        ans2 = {'fulfillmentText': ans2}
+        return make_response(jsonify(ans2))
 
 
 
-    # print(ans)
+
     print(query)
     # print(context)
     print(para)
@@ -82,9 +92,9 @@ def webhook():
     #     # If the request is not to the translate.text action throw an error
     #     log.error('Unexpected action requested: %s', json.dumps(req))
     #     res = {'speech': 'error', 'displayText': 'error'}
-    print(ans)
 
-    return make_response(jsonify(ans))
+
+    # return make_response(jsonify(ans))
 # @app.route('/')
 # def hello_world():
 #     return 'hello world'
