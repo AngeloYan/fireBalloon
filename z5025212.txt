@@ -151,5 +151,25 @@ Implement voice recognition on the web interface.
 
 What is planned for next period?
 Implement Facebook Messenger integration.
-Implementing voice recognitionon the web interface is not urgent if voice works
+Implementing voice recognition on the web interface is not urgent if voice works
 on other platforms such as Messenger or Google Assistant.
+
+Week 8
+
+09/04/18
+What was planned?
+Implement Facebook Messenger integration.
+
+What was finished?
+Implemented Facebook Messenger integration.
+
+Main issues
+Facebook Messenger chat bot requires approval from Facebook to be made public.
+Only testers have access to it at the moment but that will be enough for the
+demo.
+
+What was not finished?
+Nothing.
+
+What is planned for next period?
+Host Flask backend server online instead of locally.
