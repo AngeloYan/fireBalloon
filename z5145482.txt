@@ -70,6 +70,9 @@ I tried many ways to extract data from a pdf file to a txt file. Finally, I find
 I read a lot of documents of "pdfminer", I figure out how it works on its objects and I finished my part successfully.
 
 Week 8
+10/04/2019
+In the lab, tutor told us that we had a lot need to be improved. I find the format of some special symbols in my part is
+not very good. This week, I am going to fix this problem and I will start to write my final report.
 
 
 
