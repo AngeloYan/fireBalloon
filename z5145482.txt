@@ -65,6 +65,12 @@ Week 7
 03/04/2019
 In the lab, tutor told me that the way I extract data does not make sense, I need to change my way of extracting data.
 By the way, we need to start to write the report draft from this week.
+05/04/2019
+I tried many ways to extract data from a pdf file to a txt file. Finally, I find the package "pdfminer" is really good!
+I read a lot of documents of "pdfminer", I figure out how it works on its objects and I finished my part successfully.
+
+Week 8
+
 
 
 
