@@ -11,28 +11,66 @@ from preprocess import construct_corpus
 import numpy as np
 
 
+import  pymongo
+
+
 
 
 
 def keywords_extracted_tfidf():
-
-    chunks_corpus_raw = []
-    with open('9900_backend/answer_content.txt', encoding='UTF-8') as f:
-        for line in f:
-            chunks_corpus_raw.append(line.splitlines()[0])
+    
+    
+    
+    myclient = pymongo.MongoClient("mongodb://Lalala_0704:sophia950704@ds123698.mlab.com:23698/test_0704")
+    db = myclient.get_database()
+    collection = [db['comp9414corpus'], db['comp9444corpus'], db['comp1531corpus']]
+    title = []
+    content = []
+    for i in range(3):
+        data = collection[i].find()
+        final_dict = []
+        for item in data:
+            item.pop('_id')
+            final_dict.append(item)
+        for element in final_dict:
+            for key in element:
+                title.append(key)
+        for element in final_dict:
+            for key in element.values():
+                content.append(key)
+                
+    #print(len(content),len(title))
+    #print(content[637])
+    #print(content[792])
+#    for i in range(len(title)):
+#        print("\n")
+#        print(title[i])
+#        print(content[i])
+#        
+#    print(len(title))
+#    print(len(content))
+    
+    #list : title and content
+    chunks_corpus_raw = content
+    #print(len(chunks_corpus_raw))
+    #chunks_corpus_raw = []
+#    with open('answer_content.txt', encoding='UTF-8') as f:
+#        for line in f:
+#            chunks_corpus_raw.append(line.splitlines()[0])
     
     chunks_corpus = construct_corpus(chunks_corpus_raw)
-    
-    title_corpus_raw = []
-    with open('9900_backend/title_content.txt', encoding='UTF-8') as f:
-        for line in f:
-            title_corpus_raw.append(line.splitlines()[0])
+    #print(len(chunks_corpus_raw),'sd',len(chunks_corpus))
+#    title_corpus_raw = []
+    title_corpus_raw = title
+#    with open('title_content.txt', encoding='UTF-8') as f:
+#        for line in f:
+#            title_corpus_raw.append(line.splitlines()[0])
     
     titles_corpus = construct_corpus(title_corpus_raw)
     
     chunks_titles_corpus = []
     for i in range(len(chunks_corpus)):
-        chunks_titles_corpus.append(chunks_corpus[i] + 2 * (' ' + titles_corpus[i]))
+        chunks_titles_corpus.append(chunks_corpus[i] + 1 * (' ' + titles_corpus[i]))
         
         
 #    questions_corpus_raw = []
@@ -46,6 +84,7 @@ def keywords_extracted_tfidf():
     
     corpus = titles_corpus + chunks_titles_corpus
     length_corpus = len(chunks_corpus)
+    #print(length_corpus)
     #corpus = chunks_titles_corpus
     #print(corpus[122])
     
@@ -70,11 +109,23 @@ def keywords_extracted_tfidf():
         sorted_dic_corpus = dict(sorted(dic_corpus.items(), key = lambda x : x[1], reverse=True))
         corpus_sorted.append(sorted_dic_corpus)
     
+    
+    #length_corpus
+#    print(len(corpus))
+#    print(length_corpus)
+    index = -1
     learning_factor = []
     for l in corpus_sorted:
+        index += 1
         dic = {}
         for d in l:
-            dic[d] = 1
+            if 'outline' in l:
+                dic[d] = 0
+            elif index < length_corpus:
+                dic[d] = 0.5
+                #dic[d] = 1
+            else:
+                dic[d] = 1
         learning_factor.append(dic)
     
     store = [corpus_sorted, features, idf, vocabulary, length_corpus, chunks_corpus_raw, title_corpus_raw, learning_factor]
