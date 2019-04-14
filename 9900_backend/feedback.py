@@ -34,7 +34,7 @@ def update(feedback):
                     update_chunk[x] = update_chunk[x] * (1 + dic_query_tfidf[x])
             store = [corpus_sorted, features, idf, vocabulary, length_corpus, chunks_corpus_raw, title_corpus_raw, learning_factor]
             store = np.array(store)
-            np.save('corpus_data.npy',store)
+            np.save('9900_backend/corpus_data.npy',store)
             return 'Thanks for your feedback. Do you have other questions?'
             
             
