@@ -17,7 +17,7 @@ import numpy as np
 def keywords_extracted_tfidf():
 
     chunks_corpus_raw = []
-    with open('/9900_backend/answer_content.txt', encoding='UTF-8') as f:
+    with open('9900_backend/answer_content.txt', encoding='UTF-8') as f:
         for line in f:
             chunks_corpus_raw.append(line.splitlines()[0])
     
