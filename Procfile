@@ -1,1 +1,1 @@
-web: gunicorn 9900_backend/app:app
+web: gunicorn --pythonpath 9900_backend app:app
