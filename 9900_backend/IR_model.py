@@ -75,21 +75,10 @@ def ir_model(query):
         
         
     sorted_rank = sorted(dic_rank.items(), key = lambda x : x[1], reverse=True)
-    #result = [sorted_rank[0][0] + 1,sorted_rank[1][0] + 1,sorted_rank[2][0] + 1,sorted_rank[3][0] + 1]
-    #result = [sorted_rank[0][0] + 1,sorted_rank[1][0] + 1,sorted_rank[2][0] + 1,sorted_rank[3][0] + 1, sorted_rank[4][0] + 1,sorted_rank[5][0] + 1,sorted_rank[6][0] + 1,sorted_rank[7][0] + 1,sorted_rank[8][0] + 1,sorted_rank[9][0] + 1]
-    #print([sorted_rank[0][1],sorted_rank[1][1] ,sorted_rank[2][1] ,sorted_rank[3][1], sorted_rank[4][1],sorted_rank[5][1],sorted_rank[6][1] ,sorted_rank[7][1] ,sorted_rank[8][1],sorted_rank[9][1]])
-    max_answer = 4
-    result = [sorted_rank[i][0] + 1 for i in range(max_answer)]
-        
-#    for x in result:
-#        b = x - 736
-#        print(str(x) + '\t'+str(b))
-    
+    result = [sorted_rank[0][0] + 1,sorted_rank[1][0] + 1,sorted_rank[2][0] + 1,sorted_rank[3][0] + 1]
     for i in range(len(result)):
         if result[i] > length_corpus:
             result[i] -= length_corpus
-
-        
     new_result = []
     for x in result:
         if x not in new_result:
@@ -97,12 +86,8 @@ def ir_model(query):
     result = new_result
     answer_list = []
     for x in result:
-        one_answer = title_corpus_raw[x-1] + ': ' + chunks_corpus_raw[x-1]
+        one_answer = title_corpus_raw[x-1] + '\t' + chunks_corpus_raw[x-1]
         answer_list.append(one_answer)
-        
-#    for x in result:
-#        print(x)
-    #print(length_corpus)
     
     
         
