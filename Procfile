@@ -1,1 +1,1 @@
-web: gunicorn 9900_backend/9900.1:app
+web: gunicorn 9900_backend/app:app
