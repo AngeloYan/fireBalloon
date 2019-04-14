@@ -79,7 +79,7 @@ def keywords_extracted_tfidf():
     
     store = [corpus_sorted, features, idf, vocabulary, length_corpus, chunks_corpus_raw, title_corpus_raw, learning_factor]
     store = np.array(store)
-    np.save('9900_backend/corpus_data.npy',store)
+    np.save('corpus_data.npy',store)
     
     return 'Hi! I am fire balloon, your personal study assistant! May I have your name?'
     

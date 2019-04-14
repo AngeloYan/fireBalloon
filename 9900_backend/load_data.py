@@ -10,7 +10,7 @@ import numpy as np
 
 def load_data(index):
     if index == 'corpus_data':
-        corpus_data = np.load('9900_backend/corpus_data.npy')
+        corpus_data = np.load('corpus_data.npy')
         corpus_data = list(corpus_data)
         return corpus_data
     elif index == 'query_data':
