@@ -51,7 +51,7 @@ likely to be as second or third suggested answer. To provide more intelligent ex
 improve our system through requesting a feedback for each searched result from users, if the actually most related
 answer is not the first suggested answer.
 
-  By default, all the learning factors of each term is set to 1. A learning factor will increase by a small value, 
+  By default, all the learning factors of each term is set to 1 or 0.5. A learning factor will increase by a small value, 
 if user chooses the second or third answer as the best one. Affected terms includes all common keyword between 
 this chunk and the query. This ensures that after some times of learning, the correct answer may appear on 
 first position.
