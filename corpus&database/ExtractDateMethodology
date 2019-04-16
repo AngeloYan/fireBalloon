@@ -16,3 +16,6 @@ conveience to the students, i also add the pageid in that pdf file to every answ
 Because i need to upload all the data to the database, then i need to store the data in a json file.
 5.Upload to Database
 We deside to use the mongodb, then we need to use the pymongo library to contact with the database.
+遇到的challenge，选数据，选什么数据，怎么区分title和content，选库（pypdf2，pdfminer），选的库函数
+生成json文件，导入文件，用字典
+爬虫爬了网站，但是最后没采纳等等。
