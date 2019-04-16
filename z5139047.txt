@@ -60,3 +60,35 @@ What was not finished?
 
 What is planned for next period?
 Writing the context part of dialogflow.
+
+week 7
+
+What was planned?
+Using webhook and Flask to connect other API.
+
+What was finished?
+I succeeded to receive the post request from dialogflow and return our own answers.
+
+Main issues
+Need to use ngrok to receive post request for localhost. It is a new part for me and also a useful tool.
+
+What was not finished?
+
+What is planned for next period?
+Writing the context part of dialogflow.
+
+week 8
+
+What was planned?
+Using webhook and Flask to connect other API.
+
+What was finished?
+I succeeded to receive the post request from dialogflow and return our own answers.
+
+Main issues
+Need to use ngrok to receive post request for localhost. It is a new part for me and also a useful tool.
+
+What was not finished?
+
+What is planned for next period?
+Writing the context part of dialogflow.
