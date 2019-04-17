@@ -9,7 +9,8 @@ body {
 
 #submitForm {
     bottom: 0;
-    background: rgb(215, 246, 250);
+    background: rgb(0, 225, 255);
+    padding: 3px;
 }
 
 #submitForm input {
