@@ -3,13 +3,13 @@ body {
 }
 
 #chatWindow {
-    background: rgb(217, 250, 215);
+    background: rgb(215, 246, 250);
     height: Calc(100vh - 35px);
 }
 
 #submitForm {
     bottom: 0;
-    background: rgb(217, 250, 215);
+    background: rgb(215, 246, 250);
 }
 
 #submitForm input {
