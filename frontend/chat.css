@@ -1,3 +1,7 @@
+body {
+    font: 25px Helvetica, Arial;
+}
+
 #submitForm {
     /* width:100%;
     position: fixed; */
@@ -5,11 +9,11 @@
 }
 
 #submitForm input {
-    width: 90%;
+    width: 85%;
 }
 
 #submitForm button {
-    width: 9%;
+    width: 14%;
 }
 
 .anchorBottom {
