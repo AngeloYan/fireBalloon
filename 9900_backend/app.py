@@ -29,7 +29,7 @@ def int():
     intent_1['where'] = 'int'
     intent_1['web'] = 'int'
     intent_1['when']='int'
-    intent_1['address']='int'
+    intent_1['location']='int'
     intent_1['place']='int'
     # intent_1['website']='int'
 
@@ -151,7 +151,7 @@ def context(query):
             if j == save[1]:
                 if save[0] == 'time' or save[0] =='when':
                     return i[1]
-                elif save[0] == 'where' or save[0] =='place' or save[0] =='address':
+                elif save[0] == 'where' or save[0] =='place' or save[0] =='location':
                     return i[2]
                 elif save[0] == 'web':
                     return i[3]
