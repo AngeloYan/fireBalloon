@@ -5,6 +5,7 @@ body {
 #chatWindow {
     background: rgb(215, 246, 250);
     height: Calc(100vh - 35px);
+    overflow: auto;
 }
 
 #submitForm {
