@@ -1,41 +1,21 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+#submitForm {
+    /* width:100%;
+    position: fixed; */
+    bottom: 0;
 }
 
-body {
-    font: 13px Helvetica, Arial;
-    display: flex;
-    justify-content: center;
+#submitForm input {
+    width: 90%;
 }
 
-#chatWindow {
-    width: 50%;
-    height: 100vh;
-    outline: 5px solid black;
+#submitForm button {
+    width: 9%;
 }
 
-form {
-    background: #000;
-    padding: 3px;
+.anchorBottom {
     position: fixed;
     bottom: 0;
-    width: 50%;
-}
-
-form input {
-    border: 0;
-    padding: 10px;
-    width: 90%;
-    margin-right: .5%;
-}
-
-form button {
-    width: 9%;
-    background: rgb(130, 224, 255);
-    border: none;
-    padding: 10px;
+    width: 100%;
 }
 
 #messages {
