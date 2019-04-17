@@ -30,16 +30,21 @@ body {
 }
 
 #messages {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+    margin-top: 10px;
 }
 
-#messages li {
-    padding: 5px 10px;
-    white-space: pre-wrap;
+.message {
+    width: 70%;
 }
 
-#messages li:nth-child(odd) {
-    background: #eee;
+.messageUser {
+    background: rgb(149, 255, 128);
+    text-align: right;
+    margin-left: auto;
+    margin-right: 0;
+}
+
+.messageBot {
+    background: rgb(255, 128, 128);
+    margin-left: 0;
 }
