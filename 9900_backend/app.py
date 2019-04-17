@@ -3,6 +3,7 @@ from flask import Flask, jsonify, make_response, request
 from IR_model import ir_model
 from feedback import update
 from keywords_extraction import keywords_extracted_tfidf
+import string
 import requests
 import json
 app = Flask(__name__)
@@ -74,6 +75,7 @@ def webhook():
         return make_response(jsonify(ans4))
 
     if intent == 'place' or 'timetable' or 'course_web_site':
+        query=query.translate(str.maketrans('','',string.punctuation))
         check=query.split()
         for i in range(0 ,len(check)):
             if 'comp' in check[i]:
