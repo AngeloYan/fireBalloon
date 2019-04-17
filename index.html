@@ -22,12 +22,12 @@
       });
       socket.on('user message', function (msg) {
         // $('#messages').append($('<li>').text(msg));
-        $('#messages').append($("<div class='messageUser'>").append($("<p>").text(msg)));
+        $('#messages').append($("<row>").append($("<div class='message messageUser'>").append($("<p>").text(msg))));
       });
 
       socket.on('bot message', function (msg) {
         // $('#messages').append($('<li>').text(msg));
-        $('#messages').append($("<div class='messageBot  '>").append($("<p>").text(msg)));
+        $('#messages').append($("<row>").append($("<div class='message messageBot'>").append($("<p>").text(msg))));
       });
     });
   </script>
@@ -43,12 +43,7 @@
       <div class="col-xs-12 col-md-6">
         <div id="chatWindow">
           <div id="messages">
-            <div class="messageUser">
-              <p>user</p>
-            </div>
-            <div class="messageBot">
-              <p>bot</p>
-            </div>
+
           </div>
         </div>
         <form action="" id="submitForm">

@@ -29,12 +29,22 @@ body {
     width: 100%;
 }
 
+#messages {
+    margin-top: 10px;
+}
+
+.message {
+    width: 70%;
+}
+
 .messageUser {
     background: rgb(149, 255, 128);
     text-align: right;
+    margin-left: auto;
+    margin-right: 0;
 }
 
 .messageBot {
     background: rgb(255, 128, 128);
-    direction: lts;
+    margin-left: 0;
 }
