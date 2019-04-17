@@ -14,12 +14,11 @@ body {
     padding: 3px;
 }
 
-#submitForm input {
+/* #submitForm input {
     width: 85%;
-}
+} */
 
 #submitForm button {
-    width: 14%;
     background: rgb(17, 248, 0);
 }
 
