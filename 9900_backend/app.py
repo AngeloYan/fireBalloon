@@ -139,29 +139,31 @@ def webhook():
 def context(query):
     query=query.lower()
     int()
+    global save1
     for key in intent_1:
-        if  key in query:
+        if key in query:
             if intent_1[key] == 'int':
-                save[0] = key
+                save1[0] = key
             else:
-                save[1] = key
-    if save[0] is None:
+                save1[1] = key
+    if save1[0] is None:
         return 'what do you want to know about it'
-    if save[1] is None:
+    if save1[1] is None:
         return 'what course do you want to know about?'
-    save2 = np.array(save1)
-    np.save('save2.npy', save2)
-    save3 = np.load('save2.npy')
-    save4 = list(save3)
+
     for i in obj_1:
         for j in i[0]:
-            if j == save4[1]:
-                if save4[0] == 'time' or save4[0] == 'when':
+            if j == save1[1]:
+                if save1[0] == 'time' or save1[0] == 'when':
                     return i[1]
-                elif save4[0] == 'where' or save4[0] == 'place' or save4[0] == 'location':
+                elif save1[0] == 'where' or save1[0] == 'place' or save1[0] == 'location':
                     return i[2]
-                elif save4[0] == 'web':
+                elif save1[0] == 'web':
                     return i[3]
+    save1 = np.array(save1)
+    np.save('save2.npy', save1)
+    save1 = np.load('save2.npy')
+    save1 = list(save1)
 
 
 
