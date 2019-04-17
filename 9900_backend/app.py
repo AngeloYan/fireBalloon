@@ -6,6 +6,7 @@ from keywords_extraction import keywords_extracted_tfidf
 import string
 import requests
 import json
+import numpy as np
 app = Flask(__name__)
 
 
@@ -148,14 +149,18 @@ def context(query):
         return 'what do you want to know about it'
     if save[1] is None:
         return 'what course do you want to know about?'
+    save2 = np.array(save1)
+    np.save('save2.npy', save2)
+    save3 = np.load('save2.npy')
+    save4 = list(save3)
     for i in obj_1:
         for j in i[0]:
-            if j == save[1]:
-                if save[0] == 'time' or save[0] =='when':
+            if j == save4[1]:
+                if save4[0] == 'time' or save4[0] == 'when':
                     return i[1]
-                elif save[0] == 'where' or save[0] =='place' or save[0] =='location':
+                elif save4[0] == 'where' or save4[0] == 'place' or save4[0] == 'location':
                     return i[2]
-                elif save[0] == 'web':
+                elif save4[0] == 'web':
                     return i[3]
 
 
