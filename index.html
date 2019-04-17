@@ -9,9 +9,14 @@
     crossorigin="anonymous">
   <link rel="stylesheet" href="/frontend/chat.css">
 
+  <script src="/frontend/index.js"></script>
+
   <!-- import socket io -->
   <script src="/socket.io/socket.io.js"></script>
   <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+</head>
+
+<body onload="loadPage()" onresize="loadPage()">
   <script>
     $(function () {
       var socket = io();
@@ -32,10 +37,6 @@
       });
     });
   </script>
-</head>
-
-<body>
-
 
   <div class="anchorBottom">
     <div class="row">
@@ -48,8 +49,8 @@
           </div>
         </div>
         <form action="" id="submitForm">
-          <input id="m" autocomplete="off" />
-          <button>Send</button>
+          <input id="submitFormInput" autocomplete="off" />
+          <button id="submitFormButton">Send</button>
         </form>
       </div>
     </div>
