@@ -74,7 +74,7 @@ def webhook():
         ans4 = {'fulfillmentText': ans4}
         return make_response(jsonify(ans4))
 
-    if intent == 'place' or 'timetable' or 'course_web_site':
+    if intent == 'place' or intent =='timetable' or intent =='course_web_site' or intent == 'what_about':
         query=query.translate(str.maketrans('','',string.punctuation))
         check=query.split()
         for i in range(0 ,len(check)):
