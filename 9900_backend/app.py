@@ -160,10 +160,10 @@ def context(query):
                     return i[2]
                 elif save1[0] == 'web':
                     return i[3]
-    save1 = np.array(save1)
-    np.save('save2.npy', save1)
-    save1 = np.load('save2.npy')
-    save1 = list(save1)
+    # save1 = np.array(save1)
+    # np.save('save2.npy', save1)
+    # save1 = np.load('save2.npy')
+    # save1 = list(save1)
 
 
 
