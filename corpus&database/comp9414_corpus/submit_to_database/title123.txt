@@ -3,13 +3,8 @@ Reactive Agents
 History of Reactive Agents
 Braitenberg Vehicles
 Braitenberg Vehicles
-Braitenberg Vehicles
-Braitenberg Vehicles
 Chemotaxis
-Bacterial Motion
 Chemotaxis
-Robot Model of Nematode Worm
-The Swiss Robots
 The Swiss Robots
 Behaviour-Based Robotics
 Horizontal Decomposition

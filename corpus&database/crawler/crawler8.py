@@ -63,10 +63,14 @@ def parse_obj_content(objs):
                     if isinstance(o,pdfminer.layout.LTTextLine):
                         text=o.get_text()
                         # print (type(text.encode('ascii','ignore')))
-                        text = text.encode('ascii','ignore')
+                        text = text.encode('utf-8')
                         text = text[:-1]
                         # print (text)
-                        if text.encode('ascii','ignore') == 'COMP9444' or text.encode('ascii','ignore') == 'c(cid:13)Alan Blair, 2018' or text.encode('ascii','ignore') == 'c(cid:13)Alan Blair, 2013-19' or text.encode('ascii','ignore') == 'c(cid:13)Alan Blair, 2017-18' or text.encode('ascii','ignore') == 'c(cid:13)Alan Blair, 2013-18' or text.encode('ascii','ignore') == 'UNSW':
+                        # if text.encode('ascii','ignore') == 'COMP9444' or text.encode('ascii','ignore') == 'c(cid:13)Alan Blair, 2018' or text.encode('ascii','ignore') == 'c(cid:13)Alan Blair, 2013-19' or text.encode('ascii','ignore') == 'c(cid:13)Alan Blair, 2017-18' or text.encode('ascii','ignore') == 'c(cid:13)Alan Blair, 2013-18' or text.encode('ascii','ignore') == 'UNSW':
+                        #     # new_text = new_text + ' '+ text
+                        #     # print ("1111111111111")
+                        #     break
+                        if text == 'c(cid:13)AIMA, 2002, Alan Blair, 2010-9' or text == 'UNSW':
                             # new_text = new_text + ' '+ text
                             # print ("1111111111111")
                             break
@@ -104,7 +108,7 @@ def parse_obj_content(objs):
     # print("adhjabjha",new_text)
     return new_text
 
-document = open('2a_Tasks.pdf', 'rb')
+document = open('7a_Logic.pdf', 'rb')
 #Create resource manager
 rsrcmgr = PDFResourceManager()
 # Set parameters for analysis.
@@ -124,7 +128,7 @@ for page in PDFPage.get_pages(document):
     if layout.pageid > 1:
         # print ("aaa")
         if parse_obj(layout._objs) == True:
-            text_title = parse_obj_title(layout._objs).encode('ascii','ignore')
+            text_title = parse_obj_title(layout._objs).encode('utf-8')
             text_title = text_title[:-1]
             title.append(text_title)
             text_content = parse_obj_content(layout._objs)
@@ -135,34 +139,11 @@ for i in range(len(title)):
     print ("\n")
     print (title[i])
     print (content[i])
-# print (title)
-# print (len(title))
-# #
-# print (content)
-# print (len(content))
-
-# f1 = codecs.open('title1111.txt', 'w', encoding='utf-8')
-# for i in title:
-#     f1.write(i)
-#     f1.write('\n')
-# f2 = codecs.open('content1111.txt', 'w', encoding='utf-8')
-# for i in content:
-#     f2.write(i)
-#     f2.write('\n')
-
-
-################
-# with open('title1111.txt','r') as f:
-#     title_txt = f.readlines()
-#     title_txt = ''.join(title_txt)
-#     title_txt = title_txt.split('\n')
-#     title_txt = title_txt[:-1]
-# with open('content1111.txt','r') as f:
-#     answer = f.readlines()
-#     answer = ''.join(answer)
-#     answer = answer.split('\n')
-#     answer = answer[:-1]
-# print (title_txt)
-# print (answer)
-# print (len(answer))
-# print (len(title_txt))
+f1 = codecs.open('title0000.txt', 'w')
+for i in title:
+    f1.write(i)
+    f1.write('\n')
+f2 = codecs.open('content0000.txt', 'w')
+for i in content:
+    f2.write(i)
+    f2.write('\n')
