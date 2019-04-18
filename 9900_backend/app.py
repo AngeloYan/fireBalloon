@@ -4,9 +4,9 @@ from IR_model import ir_model
 from feedback import update
 from keywords_extraction import keywords_extracted_tfidf
 import string
+import numpy as np
 import requests
 import json
-import numpy as np
 app = Flask(__name__)
 
 
@@ -20,7 +20,7 @@ l3=[['comp1531','1531','software engineering fundamentals'],'Tue 16:00 - 18:00 (
 obj_1=[l1,l2,l3]
 
 intent_1={}
-save=[None,None]
+save1=[None,None]
 def int():
     for i in obj_1:
         for j in i[0]:
@@ -75,7 +75,7 @@ def webhook():
         ans4 = {'fulfillmentText': ans4}
         return make_response(jsonify(ans4))
 
-    if intent == 'place' or intent =='timetable' or intent =='course_web_site' or intent == 'what_about':
+    if intent == 'place' or intent =='timetable' or intent =='course_web_site' or intent =='what_about':
         query=query.translate(str.maketrans('','',string.punctuation))
         check=query.split()
         for i in range(0 ,len(check)):
@@ -141,7 +141,7 @@ def context(query):
     int()
     global save1
     for key in intent_1:
-        if key in query:
+        if  key in query:
             if intent_1[key] == 'int':
                 save1[0] = key
             else:
@@ -154,16 +154,18 @@ def context(query):
     for i in obj_1:
         for j in i[0]:
             if j == save1[1]:
-                if save1[0] == 'time' or save1[0] == 'when':
+                if save1[0] == 'time' or save1[0] =='when':
                     return i[1]
-                elif save1[0] == 'where' or save1[0] == 'place' or save1[0] == 'location':
+                elif save1[0] == 'where' or save1[0] =='place' or save1[0] =='location':
                     return i[2]
                 elif save1[0] == 'web':
                     return i[3]
-    # save1 = np.array(save1)
-    # np.save('save2.npy', save1)
-    # save1 = np.load('save2.npy')
-    # save1 = list(save1)
+    save1=np.array(save1)
+    np.save('save2.npy',save1)
+    save1=np.load('save2.npy')
+    save1= list(save1)
+
+#
 
 
 
@@ -172,5 +174,3 @@ def context(query):
 if __name__ == '__main__':
     port = int(os.environ.get("PORT", 5000))
     app.run(host='0.0.0.0', port=port)
-
-    # app.run(port=8080,debug=True)
