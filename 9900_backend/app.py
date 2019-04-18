@@ -14,7 +14,7 @@ app = Flask(__name__)
 # headers = {'content-type':'application/json'}
 # url="http://127.0.0.1:5050/register"
 
-l1=[['comp9444','9444','neural networks and deep learning'],'Monday 6-9pm, Weeks 1-9,11-13 ','Central Lecture Block 7 ',' http://www.cse.unsw.edu.au/~cs9444']
+l1=[['comp9444','9444','neural networks and deep learning'],'Monday 6-9pm, Weeks 1-9,11-13 ','Central Lecture Block 7',' http://www.cse.unsw.edu.au/~cs9444']
 l2=[['comp9414','9414','artificial intelligence'],'Wed 10:00 - 13:00 (Weeks:11), Fri 10:00 - 13:00 (Weeks:1-8,10)','Sir John Clancy Auditorium (K-C24-G17)',' http://www.cse.unsw.edu.au/~cs9414']
 l3=[['comp1531','1531','software engineering fundamentals'],'Tue 16:00 - 18:00 (Weeks:1-10), Wed 14:00 - 16:00 (Weeks:1-10)','Keith Burrows Theatre (K-J14-G5)',' http://www.cse.unsw.edu.au/~cs1531']
 obj_1=[l1,l2,l3]
@@ -24,9 +24,11 @@ save1=[None,None]
 def int():
     for i in obj_1:
         for j in i[0]:
+            j=j.lower()
             intent_1[j]='obj'
         for k in range(1,len(i)):
-            intent_1[j]='obj'
+            m=i[k].lower()
+            intent_1[m]='obj'
     intent_1['time'] = 'int'
     intent_1['where'] = 'int'
     intent_1['web'] = 'int'
@@ -70,8 +72,17 @@ def webhook():
         ans3 = {'fulfillmentText': ans3}
         return make_response(jsonify(ans3))
 
+    if intent == 'restart':
+        ans7=keywords_extracted_tfidf()
+        # ans7 = {'fulfillmentText': ans7}
+        # return make_response(jsonify(ans7))
+
+
     if intent == 'Default Welcome Intent':
-        ans4 = keywords_extracted_tfidf()
+        ans4 = 'Hi! I am fire balloon, your personal study assistant! May I have your name?'
+        global save1
+        save1=[None,None]
+
         ans4 = {'fulfillmentText': ans4}
         return make_response(jsonify(ans4))
 
@@ -109,7 +120,7 @@ def webhook():
     #     output = translate(text, source_lang, target_lang)
     #
     #     # Compose the response to Dialogflow
-    ans = {'fulfillmentText': ans}
+    # ans = {'fulfillmentText': ans}
                # 'outputContexts': req['queryResult']['outputContexts']}
     # else:
     #     # If the request is not to the translate.text action throw an error
@@ -160,15 +171,16 @@ def context(query):
                     return i[2]
                 elif save1[0] == 'web':
                     return i[3]
+        for k in i[1:]:
+            if k.lower() == save1[1]:
+                p=i[0]
+
+                return p[0]
+
     save1=np.array(save1)
     np.save('save2.npy',save1)
     save1=np.load('save2.npy')
     save1= list(save1)
-
-#
-
-
-
 
 
 if __name__ == '__main__':
