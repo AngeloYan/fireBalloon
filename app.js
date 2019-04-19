@@ -6,7 +6,7 @@ const port = process.env.PORT || 3000;
 const processMessage = require('./process-message');
 
 app.use('/frontend', express.static('frontend'));
-app.use('/AllLectureNotes', express.static('AllLectureNotes'));
+app.use('/pdfs', express.static('pdfs'));
 
 app.get('/', function (req, res) {
 	res.sendFile(__dirname + '/index.html');
