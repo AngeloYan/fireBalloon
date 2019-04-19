@@ -14,9 +14,9 @@ app = Flask(__name__)
 # headers = {'content-type':'application/json'}
 # url="http://127.0.0.1:5050/register"
 
-l1=[['comp9444','9444','neural networks and deep learning'],'Monday 6-9pm, Weeks 1-9,11-13 ','Central Lecture Block 7',' http://www.cse.unsw.edu.au/~cs9444','Alan Blair']
-l2=[['comp9414','9414','artificial intelligence'],'Wed 10:00 - 13:00 (Weeks:11), Fri 10:00 - 13:00 (Weeks:1-8,10)','Sir John Clancy Auditorium (K-C24-G17)',' http://www.cse.unsw.edu.au/~cs9414','Alan Blair']
-l3=[['comp1531','1531','software engineering fundamentals'],'Tue 16:00 - 18:00 (Weeks:1-10), Wed 14:00 - 16:00 (Weeks:1-10)','Keith Burrows Theatre (K-J14-G5)',' http://www.cse.unsw.edu.au/~cs1531','Dr A Natarajan']
+l1=[['comp9444','9444','neural networks and deep learning'],'Monday 6-9pm, Weeks 1-9,11-13 ','Central Lecture Block 7',' http://www.cse.unsw.edu.au/~cs9444','Alan Blair','Term 3','Postgraduate']
+l2=[['comp9414','9414','artificial intelligence'],'Wed 10:00 - 13:00 (Weeks:11), Fri 10:00 - 13:00 (Weeks:1-8,10)','Sir John Clancy Auditorium (K-C24-G17)',' http://www.cse.unsw.edu.au/~cs9414','Alan Blair','Summer Term, Term 1, Term 2','Postgraduate']
+l3=[['comp1531','1531','software engineering fundamentals'],'Tue 16:00 - 18:00 (Weeks:1-10), Wed 14:00 - 16:00 (Weeks:1-10)','Keith Burrows Theatre (K-J14-G5)',' http://www.cse.unsw.edu.au/~cs1531','Dr A Natarajan','Term 1, Term 3','Undergraduate']
 obj_1=[l1,l2,l3]
 
 #intent_1={}
@@ -40,6 +40,8 @@ def int():
     intent_1['place']='int'
     intent_1['teach']='int'
     intent_1['lecturer']='int'
+    intent_1['terms']='int'
+    intent_1['level']='int'
     # intent_1['website']='int'
     return intent_1
 
@@ -94,7 +96,7 @@ def webhook():
         ans4 = {'fulfillmentText': ans4}
         return make_response(jsonify(ans4))
 
-    if intent == 'place' or intent =='timetable' or intent =='course_web_site' or intent =='what_about':
+    if intent == 'place' or intent =='timetable' or intent =='course_web_site' or intent =='what_about' or intent=='lecturer' or intent=='terms' or intent == 'study_level':
         query=query.translate(str.maketrans('','',string.punctuation))
         check=query.split()
         for i in range(0 ,len(check)):
@@ -185,6 +187,10 @@ def context(query):
                     return i[3]
                 elif save1[0] == 'lecturer' or save1[0] == 'teach':
                     return i[4]
+                elif save1[0]== 'terms':
+                    return i[5]
+                elif save1[0]== 'level':
+                    return i[6]
         for k in i[1:]:
             if k.lower() == save1[1]:
                 p=i[0]
