@@ -41,5 +41,5 @@ def update(feedback):
             
             
     else:
-        return 'Sorry, your input of feedback is invalid. Do you want to try again or do you have another question about this course?'
+        return 'Sorry, your input is invalid. Do you want to try again or do you have another question about this course?'
     
