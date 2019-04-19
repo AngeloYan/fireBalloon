@@ -33,7 +33,25 @@
 
       socket.on('bot message', function (msg) {
         // $('#messages').append($('<li>').text(msg));
-        $('#messages').prepend($("<div class='row'>").append($("<div class='message messageBot'>").append($("<p>").text(msg))));
+
+        // split text into paragraphs if matcch
+        msgList = msg.split(/\r?\n\n/);
+        console.log(msgList);
+
+        // handle each paragraph as separate text bubble
+        for (var i = 0; i < msgList.length; i++) {
+          console.log(i);
+          var regex = /\(see (.+\.pdf) Page (\d\d) \)\n/g;
+          var matches = msg.match(regex);
+          $('#messages').prepend($("<div class='row'>").append($("<div class='message messageBot'>").append($("<p>").text(msgList[i]))));
+        }
+
+        // var regex = /\(see (.+\.pdf) Page (\d\d) \)\n/g;
+        // regex = /(\d\d)/g;
+
+        // var matches = msg.match(regex);
+        // console.log(matches);
+
       });
     });
   </script>
@@ -53,8 +71,10 @@
       </div>
 
       <div class="col-md-6">
-        <embed id="pdfDisplay" src="/pdfs/Comp9414/week1a_Foundations.pdf" width="100%" height="100%" />
+        <!-- <embed id="pdfDisplay" src="" width="100%" height="100%" /> -->
+        <iframe id="pdfDisplay" src="" width="100%" height="100%"> </iframe>
       </div>
+      <!-- <button onclick="openPDF('/pdfs/Comp9414/week1a_Foundations.pdf')">click</button> -->
     </div>
   </div>
 
