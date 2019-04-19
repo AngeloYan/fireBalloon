@@ -76,8 +76,9 @@ def webhook():
 
     if intent == 'restart':
         ans7=keywords_extracted_tfidf()
-        # ans7 = {'fulfillmentText': ans7}
-        # return make_response(jsonify(ans7))
+        ans10='Restart successfully'
+        ans10 = {'fulfillmentText': ans10}
+        return make_response(jsonify(ans10))
 
 
     if intent == 'Default Welcome Intent':
