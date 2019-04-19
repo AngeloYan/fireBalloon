@@ -20,9 +20,9 @@ l3=[['comp1531','1531','software engineering fundamentals'],'Tue 16:00 - 18:00 (
 obj_1=[l1,l2,l3]
 
 intent_1={}
-save2=[None,None]
-save2=np.array(save2)
-np.save('save2.npy',save2)
+# save2=[None,None]
+# save2=np.array(save2)
+# np.save('save2.npy',save2)
 def int():
     for i in obj_1:
         for j in i[0]:
