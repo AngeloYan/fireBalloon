@@ -6,6 +6,8 @@ body {
     background: rgb(215, 246, 250);
     height: Calc(100vh - 35px);
     overflow: auto;
+    transform: rotate(180deg);
+    direction: rtl;
 }
 
 #submitForm {
@@ -27,6 +29,7 @@ body {
 #messages {
     margin-top: 10px;
     padding: 30px 40px;
+    direction: ltr;
 }
 
 .message {
@@ -35,16 +38,16 @@ body {
     display: block;
     border-radius: 20px;
     white-space: pre-wrap;
+    transform: rotate(180deg);
 }
 
 .messageUser {
     background: rgb(149, 255, 128);
-    text-align: right;
-    margin-left: auto;
-    margin-right: 0;
+    margin-left: 0;
 }
 
 .messageBot {
     background: rgb(255, 128, 128);
-    margin-left: 0;
+    margin-left: auto;
+    margin-right: 0;
 }
