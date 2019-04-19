@@ -161,12 +161,13 @@ def context(query):
                 save1[0] = key
             else:
                 save1[1] = key
+    save1 = np.array(save1)
+    np.save('save2.npy', save1)
     if save1[0] is None:
         return 'what do you want to know about it'
     if save1[1] is None:
         return 'what course do you want to know about?'
-    save1 = np.array(save1)
-    np.save('save2.npy', save1)
+
 
     for i in obj_1:
         for j in i[0]:
