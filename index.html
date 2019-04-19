@@ -49,7 +49,7 @@
           if (matches) {
             // $(newMsg).append($("<input>").type("button").onclick("openPDF(" + matches[1] + ")"));
             // $(newMsg).append($('<input>').attr({ type: 'button', name: 'btn1', value: 'a button', onclick: "displayPDF(" + matches[1] + ")" }));
-            $('#messages').prepend($("<div class='message messageBot row'>").append($("<p>").text(replaced)).append($('<input>').attr({ type: 'button', name: 'btn1', value: matches[0], onclick: "openPDF('/pdfs/" + matches[1] + "#page=" + matches[2] + "')" })));
+            $('#messages').prepend($("<div class='message messageBot row'>").append($("<p>").text(replaced)).append($('<input>').attr({ type: 'button', name: 'btn1', value: matches[0], onclick: "openPDF('/pdfs/" + matches[1] + "#page=" + (parseInt(matches[2]) + 1).toString() + "')" })));
           } else {
             $('#messages').prepend($("<div class='message messageBot row'>").append($("<p>").text(replaced)));
           }
