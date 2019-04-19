@@ -20,7 +20,9 @@ l3=[['comp1531','1531','software engineering fundamentals'],'Tue 16:00 - 18:00 (
 obj_1=[l1,l2,l3]
 
 intent_1={}
-save1=[None,None]
+save2=[None,None]
+save2=np.array(save2)
+np.save('save2.npy',save2)
 def int():
     for i in obj_1:
         for j in i[0]:
@@ -80,8 +82,9 @@ def webhook():
 
     if intent == 'Default Welcome Intent':
         ans4 = 'Hi! I am fire balloon, your personal study assistant! May I have your name?'
-        global save1
-        save1=[None,None]
+        save3=[None,None]
+        save3 = np.array(save3)
+        np.save('save2.npy', save3)
 
         ans4 = {'fulfillmentText': ans4}
         return make_response(jsonify(ans4))
@@ -150,7 +153,8 @@ def webhook():
 def context(query):
     query=query.lower()
     int()
-    global save1
+    save1 = np.load('save2.npy')
+    save1 = list(save1)
     for key in intent_1:
         if  key in query:
             if intent_1[key] == 'int':
@@ -161,6 +165,8 @@ def context(query):
         return 'what do you want to know about it'
     if save1[1] is None:
         return 'what course do you want to know about?'
+    save1 = np.array(save1)
+    np.save('save2.npy', save1)
 
     for i in obj_1:
         for j in i[0]:
@@ -176,11 +182,6 @@ def context(query):
                 p=i[0]
 
                 return p[0]
-
-    save1=np.array(save1)
-    np.save('save2.npy',save1)
-    save1=np.load('save2.npy')
-    save1= list(save1)
 
 
 if __name__ == '__main__':
