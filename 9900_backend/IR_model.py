@@ -129,7 +129,7 @@ def ir_model(query):
 #    
     answer = ''
     for i in range(len(answer_list)):
-        answer = answer + 'Suggested Answer' + str(i+1) + ':\n' + answer_list[i] + '\n\n'
+        answer = answer + 'Suggested Answer ' + str(i+1) + ':\n' + answer_list[i] + '\n\n'
 #    for x in answer_list:
 #        answer = answer + 'Suggested Answer:\n' + answer1 + '\n\n'
 #    answer =  'Suggested Answer1:\n' + answer1 + '\n\n' + \

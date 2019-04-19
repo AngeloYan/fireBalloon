@@ -38,6 +38,8 @@ def keywords_extracted_tfidf():
         for element in final_dict:
             for key in element.values():
                 content.append(key)
+    #print(content[705],'\n',content[425],'\n',content[426])
+    #619
                 
     #print(len(content),len(title))
     #print(content[637])
@@ -132,7 +134,7 @@ def keywords_extracted_tfidf():
     store = np.array(store)
     np.save('corpus_data.npy',store)
     
-    return 'Hi! I am fire balloon, your personal study assistant! May I have your name?'
+    return 'Restart Successfully'
     
     
     #return corpus_sorted, features, idf, vocabulary, length_corpus, chunks_corpus_raw, title_corpus_raw, learning_factor
