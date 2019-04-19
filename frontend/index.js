@@ -6,5 +6,8 @@ function loadPage() {
 }
 
 function openPDF(pdfName) {
+    document.getElementById("pdfDisplay").remove();
+    $('#pdf').append($('<iframe id="pdfDisplay" src="" width="100%" height="100%">'));
+    
     document.getElementById("pdfDisplay").src = pdfName;
 }

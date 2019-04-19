@@ -36,15 +36,27 @@
 
         // split text into paragraphs if matcch
         msgList = msg.split(/\r?\n\n/);
-        console.log(msgList);
+
+        // var newMsg = document.createAttribute('div');
+        // newMsg.className = "row message messageBot";
 
         // handle each paragraph as separate text bubble
         for (var i = 0; i < msgList.length; i++) {
-          console.log(i);
-          var regex = /\(see (.+\.pdf) Page (\d\d) \)\n/g;
-          var matches = msg.match(regex);
-          $('#messages').prepend($("<div class='row'>").append($("<div class='message messageBot'>").append($("<p>").text(msgList[i]))));
+          var regex = /\(see (.+\.pdf) Page (\d+) \)$/;
+          var matches = msgList[i].match(regex);
+          var replaced = msgList[i].replace(regex, "");
+          // $(newMsg).append($("<p>").text(replaced));
+          if (matches) {
+            // $(newMsg).append($("<input>").type("button").onclick("openPDF(" + matches[1] + ")"));
+            // $(newMsg).append($('<input>').attr({ type: 'button', name: 'btn1', value: 'a button', onclick: "displayPDF(" + matches[1] + ")" }));
+            $('#messages').prepend($("<div class='message messageBot row'>").append($("<p>").text(replaced)).append($('<input>').attr({ type: 'button', name: 'btn1', value: matches[0], onclick: "openPDF('/pdfs/" + matches[1] + "#page=" + matches[2] + "')" })));
+          } else {
+            $('#messages').prepend($("<div class='message messageBot row'>").append($("<p>").text(replaced)));
+          }
         }
+
+        // document.getElementById("messages").prepend(newMsg);
+        // $('#messages').prepend(newMsg);
 
         // var regex = /\(see (.+\.pdf) Page (\d\d) \)\n/g;
         // regex = /(\d\d)/g;
@@ -70,7 +82,7 @@
         </form>
       </div>
 
-      <div class="col-md-6">
+      <div id="pdf" class="col-md-6">
         <!-- <embed id="pdfDisplay" src="" width="100%" height="100%" /> -->
         <iframe id="pdfDisplay" src="" width="100%" height="100%"> </iframe>
       </div>
