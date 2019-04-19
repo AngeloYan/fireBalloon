@@ -33,15 +33,43 @@
 
       socket.on('bot message', function (msg) {
         // $('#messages').append($('<li>').text(msg));
-        $('#messages').prepend($("<div class='row'>").append($("<div class='message messageBot'>").append($("<p>").text(msg))));
+
+        // split text into paragraphs if matcch
+        msgList = msg.split(/\r?\n\n/);
+
+        // var newMsg = document.createAttribute('div');
+        // newMsg.className = "row message messageBot";
+
+        // handle each paragraph as separate text bubble
+        for (var i = 0; i < msgList.length; i++) {
+          var regex = /\(see (.+\.pdf) Page (\d+) \)$/;
+          var matches = msgList[i].match(regex);
+          var replaced = msgList[i].replace(regex, "");
+          // $(newMsg).append($("<p>").text(replaced));
+          if (matches) {
+            // $(newMsg).append($("<input>").type("button").onclick("openPDF(" + matches[1] + ")"));
+            // $(newMsg).append($('<input>').attr({ type: 'button', name: 'btn1', value: 'a button', onclick: "displayPDF(" + matches[1] + ")" }));
+            $('#messages').prepend($("<div class='message messageBot row'>").append($("<p>").text(replaced)).append($('<input>').attr({ type: 'button', name: 'btn1', value: matches[0], onclick: "openPDF('/pdfs/" + matches[1] + "#page=" + matches[2] + "')" })));
+          } else {
+            $('#messages').prepend($("<div class='message messageBot row'>").append($("<p>").text(replaced)));
+          }
+        }
+
+        // document.getElementById("messages").prepend(newMsg);
+        // $('#messages').prepend(newMsg);
+
+        // var regex = /\(see (.+\.pdf) Page (\d\d) \)\n/g;
+        // regex = /(\d\d)/g;
+
+        // var matches = msg.match(regex);
+        // console.log(matches);
+
       });
     });
   </script>
 
   <div class="anchorBottom">
     <div class="row">
-      <div class="col-1 col-md-3"></div>
-
       <div class="col-12 col-md-6">
         <div id="chatWindow">
           <div id="messages">
@@ -53,8 +81,16 @@
           <button id="submitFormButton">Send</button>
         </form>
       </div>
+
+      <div id="pdf" class="col-md-6">
+        <!-- <embed id="pdfDisplay" src="" width="100%" height="100%" /> -->
+        <iframe id="pdfDisplay" src="" width="100%" height="100%"> </iframe>
+      </div>
+      <!-- <button onclick="openPDF('/pdfs/Comp9414/week1a_Foundations.pdf')">click</button> -->
     </div>
   </div>
+
+  <!-- <embed src="/AllLectureNotes/Comp9414/week1a_Foundations.pdf" width="800px" height="2100px" /> -->
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
     crossorigin="anonymous"></script>

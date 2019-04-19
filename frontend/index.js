@@ -4,3 +4,10 @@ function loadPage() {
     document.getElementById("submitFormInput").style.width =
         (totalWidth - buttonWidth - 20).toString() + "px";
 }
+
+function openPDF(pdfName) {
+    document.getElementById("pdfDisplay").remove();
+    $('#pdf').append($('<iframe id="pdfDisplay" src="" width="100%" height="100%">'));
+    
+    document.getElementById("pdfDisplay").src = pdfName;
+}
