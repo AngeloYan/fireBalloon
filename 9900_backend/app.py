@@ -14,16 +14,17 @@ app = Flask(__name__)
 # headers = {'content-type':'application/json'}
 # url="http://127.0.0.1:5050/register"
 
-l1=[['comp9444','9444','neural networks and deep learning'],'Monday 6-9pm, Weeks 1-9,11-13 ','Central Lecture Block 7',' http://www.cse.unsw.edu.au/~cs9444']
-l2=[['comp9414','9414','artificial intelligence'],'Wed 10:00 - 13:00 (Weeks:11), Fri 10:00 - 13:00 (Weeks:1-8,10)','Sir John Clancy Auditorium (K-C24-G17)',' http://www.cse.unsw.edu.au/~cs9414']
-l3=[['comp1531','1531','software engineering fundamentals'],'Tue 16:00 - 18:00 (Weeks:1-10), Wed 14:00 - 16:00 (Weeks:1-10)','Keith Burrows Theatre (K-J14-G5)',' http://www.cse.unsw.edu.au/~cs1531']
+l1=[['comp9444','9444','neural networks and deep learning'],'Monday 6-9pm, Weeks 1-9,11-13 ','Central Lecture Block 7',' http://www.cse.unsw.edu.au/~cs9444','Alan Blair']
+l2=[['comp9414','9414','artificial intelligence'],'Wed 10:00 - 13:00 (Weeks:11), Fri 10:00 - 13:00 (Weeks:1-8,10)','Sir John Clancy Auditorium (K-C24-G17)',' http://www.cse.unsw.edu.au/~cs9414','Alan Blair']
+l3=[['comp1531','1531','software engineering fundamentals'],'Tue 16:00 - 18:00 (Weeks:1-10), Wed 14:00 - 16:00 (Weeks:1-10)','Keith Burrows Theatre (K-J14-G5)',' http://www.cse.unsw.edu.au/~cs1531','Dr A Natarajan']
 obj_1=[l1,l2,l3]
 
-intent_1={}
+#intent_1={}
 # save2=[None,None]
 # save2=np.array(save2)
 # np.save('save2.npy',save2)
 def int():
+    intent_1 = {}
     for i in obj_1:
         for j in i[0]:
             j=j.lower()
@@ -37,7 +38,10 @@ def int():
     intent_1['when']='int'
     intent_1['location']='int'
     intent_1['place']='int'
+    intent_1['teach']='int'
+    intent_1['lecturer']='int'
     # intent_1['website']='int'
+    return intent_1
 
 
 @app.route('/webhook', methods=['POST'])
@@ -153,7 +157,7 @@ def webhook():
 
 def context(query):
     query=query.lower()
-    int()
+    intent_1 = int()
     save1 = np.load('save2.npy')
     save1 = list(save1)
     for key in intent_1:
@@ -179,6 +183,8 @@ def context(query):
                     return i[2]
                 elif save1[0] == 'web':
                     return i[3]
+                elif save1[0] == 'lecturer' or save1[0] == 'teach':
+                    return i[4]
         for k in i[1:]:
             if k.lower() == save1[1]:
                 p=i[0]
