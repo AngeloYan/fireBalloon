@@ -1,54 +1,53 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
-    font: 13px Helvetica, Arial;
-    display: flex;
-    justify-content: center;
+    font: 25px Helvetica, Arial;
 }
 
 #chatWindow {
-    width: 50%;
-    height: 100vh;
-    outline: 5px solid black;
+    background: rgb(215, 246, 250);
+    height: Calc(100vh - 35px);
+    overflow: auto;
+    transform: rotate(180deg);
+    direction: rtl;
 }
 
-form {
-    background: #000;
+#submitForm {
+    bottom: 0;
+    background: rgb(0, 225, 255);
     padding: 3px;
+}
+
+#submitForm button {
+    background: rgb(17, 248, 0);
+}
+
+.anchorBottom {
     position: fixed;
     bottom: 0;
-    width: 50%;
-}
-
-form input {
-    border: 0;
-    padding: 10px;
-    width: 90%;
-    margin-right: .5%;
-}
-
-form button {
-    width: 9%;
-    background: rgb(130, 224, 255);
-    border: none;
-    padding: 10px;
+    width: 100%;
 }
 
 #messages {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+    margin-top: 10px;
+    padding: 30px 40px;
+    direction: ltr;
 }
 
-#messages li {
-    padding: 5px 10px;
+.message {
+    padding: 10px 10px 10px 10px;
+    max-width: 70%;
+    display: block;
+    border-radius: 20px;
     white-space: pre-wrap;
+    transform: rotate(180deg);
 }
 
-#messages li:nth-child(odd) {
-    background: #eee;
+.messageUser {
+    background: rgb(149, 255, 128);
+    margin-left: 0;
+}
+
+.messageBot {
+    background: rgb(255, 128, 128);
+    margin-left: auto;
+    margin-right: 0;
 }
