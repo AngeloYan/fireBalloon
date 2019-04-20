@@ -72,7 +72,14 @@ I read a lot of documents of "pdfminer", I figure out how it works on its object
 Week 8
 10/04/2019
 In the lab, tutor told us that we had a lot need to be improved. I find the format of some special symbols in my part is
-not very good. This week, I am going to fix this problem and I will start to write my final report.
+not very good. This week, I am going to fix this problem and I will start to write our final report. We decided to write
+our own part seperately and I integrated the whole draft.
+
+Week 9
+17/04/2019
+In this lab, I showed our draft for final report to our tutor and tutor told us that we should improve the part about the 
+differences between our proposal and our achievement. Besides, for my part, I added the pageid to every answer for the 
+consideration of user friendly.
 
 
 
