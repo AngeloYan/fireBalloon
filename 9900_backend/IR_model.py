@@ -18,7 +18,7 @@ def ir_model(query):
     
     query = query
     
-    corpus_sorted, features, idf, vocabulary, length_corpus, chunks_corpus_raw, title_corpus_raw, learning_factor = load_data('corpus_data')
+    corpus_sorted, features, idf, vocabulary, length_corpus, chunks_corpus_raw, title_corpus_raw, learning_factor, flat = load_data('corpus_data')
     
     query = [query]
     query = construct_corpus(query)
@@ -102,9 +102,10 @@ def ir_model(query):
     answer = ''
     for i in range(len(answer_list)):
         answer = answer + 'Suggested Answer ' + str(i+1) + ':\n' + answer_list[i] + '\n\n'
-
-    answer = answer + 'Which was the best answer?\n(A feedback can help us imporve the system.)\n'
-            
+    if flat == True:
+        answer = answer + 'Which was the best answer?\n(A feedback can help us imporve the system.)\n'
+    else:
+        answer = answer + 'Which was the best answer?\n(A feedback can help us imporve the system.)\n(Note: Default Corpus)\n'
     return answer
 
 
