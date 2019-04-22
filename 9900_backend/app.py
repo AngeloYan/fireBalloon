@@ -129,7 +129,7 @@ def context(query):
     try:
         save1 = np.load('save2.npy')
     except FileNotFoundError:
-        save1 = np.load('save2_default.npy')
+        save1 = np.load('9900_backend/save2_default.npy')
     
     
     save1 = list(save1)
