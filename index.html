@@ -42,16 +42,25 @@
 
         // handle each paragraph as separate text bubble
         for (var i = 0; i < msgList.length; i++) {
-          var regex = /\(see (.+\.pdf) Page (\d+) \)$/;
-          var matches = msgList[i].match(regex);
-          var replaced = msgList[i].replace(regex, "");
-          // $(newMsg).append($("<p>").text(replaced));
-          if (matches) {
+          var regex = /\(see (.+?\.pdf) Page (\d+) \)/;
+          var matches = msgList[i].split(regex);
+          // var replaced = msgList[i].replace(regex, "");
+          console.log(matches);
+          if (matches && matches.length >= 3) {
+            // iterate through matches
+            // matches array format [pre-text, pdf_name, page_number]
+            for (var j = 0; j < matches.length; j += 3) {
+              if (matches[j]) {
+                console.log(j);
+                $('#messages').prepend($("<div class='message messageBot row'>").append($("<p>").text(matches[j])).append($('<input>').attr({ type: 'button', name: 'btn1', value: "See " + matches[j + 1] + " page " + matches[j + 2], onclick: "openPDF('/pdfs/" + matches[1] + "#page=" + (parseInt(matches[j + 2]) + 1).toString() + "')" })));
+              }
+            }
+
             // $(newMsg).append($("<input>").type("button").onclick("openPDF(" + matches[1] + ")"));
             // $(newMsg).append($('<input>').attr({ type: 'button', name: 'btn1', value: 'a button', onclick: "displayPDF(" + matches[1] + ")" }));
-            $('#messages').prepend($("<div class='message messageBot row'>").append($("<p>").text(replaced)).append($('<input>').attr({ type: 'button', name: 'btn1', value: matches[0], onclick: "openPDF('/pdfs/" + matches[1] + "#page=" + (parseInt(matches[2]) + 1).toString() + "')" })));
+            // $('#messages').prepend($("<div class='message messageBot row'>").append($("<p>").text(replaced)).append($('<input>').attr({ type: 'button', name: 'btn1', value: matches[0], onclick: "openPDF('/pdfs/" + matches[1] + "#page=" + (parseInt(matches[2]) + 1).toString() + "')" })));
           } else {
-            $('#messages').prepend($("<div class='message messageBot row'>").append($("<p>").text(replaced)));
+            $('#messages').prepend($("<div class='message messageBot row'>").append($("<p>").text(matches[0])));
           }
         }
 
@@ -84,7 +93,7 @@
 
       <div id="pdf" class="col-md-6">
         <!-- <embed id="pdfDisplay" src="" width="100%" height="100%" /> -->
-        <iframe id="pdfDisplay" src="" width="100%" height="100%"> </iframe>
+        <iframe id="pdfDisplay" src="/frontend/default.jpg" width="100%" height="100%"> </iframe>
       </div>
       <!-- <button onclick="openPDF('/pdfs/Comp9414/week1a_Foundations.pdf')">click</button> -->
     </div>
