@@ -45,7 +45,6 @@
           var regex = /\(see (.+?\.pdf) Page (\d+) \)/;
           var matches = msgList[i].split(regex);
           // var replaced = msgList[i].replace(regex, "");
-          console.log(matches);
           if (matches && matches.length >= 3) {
             // iterate through matches
             // matches array format [pre-text, pdf_name, page_number]
@@ -60,6 +59,11 @@
             // $(newMsg).append($('<input>').attr({ type: 'button', name: 'btn1', value: 'a button', onclick: "displayPDF(" + matches[1] + ")" }));
             // $('#messages').prepend($("<div class='message messageBot row'>").append($("<p>").text(replaced)).append($('<input>').attr({ type: 'button', name: 'btn1', value: matches[0], onclick: "openPDF('/pdfs/" + matches[1] + "#page=" + (parseInt(matches[2]) + 1).toString() + "')" })));
           } else {
+            var regex = /(http.+$)/;
+            var matches = matches[0].split(regex);
+            if (matches) {
+              console.log(matches);
+            }
             $('#messages').prepend($("<div class='message messageBot row'>").append($("<p>").text(matches[0])));
           }
         }
