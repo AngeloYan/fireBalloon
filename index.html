@@ -51,7 +51,7 @@
             for (var j = 0; j < matches.length; j += 3) {
               if (matches[j]) {
                 console.log(j);
-                $('#messages').prepend($("<div class='message messageBot row'>").append($("<p>").text(matches[j])).append($('<input>').attr({ type: 'button', name: 'btn1', value: "See " + matches[j + 1] + " page " + matches[j + 2], onclick: "openPDF('/pdfs/" + matches[1] + "#page=" + (parseInt(matches[j + 2]) + 1).toString() + "')" })));
+                $('#messages').prepend($("<div class='message messageBot row'>").append($("<p>").text(matches[j])).append($('<input>').attr({ type: 'button', name: 'btn1', class: 'btn', value: "See " + matches[j + 1] + " page " + matches[j + 2], onclick: "openPDF('/pdfs/" + matches[1] + "#page=" + (parseInt(matches[j + 2]) + 1).toString() + "')" })));
               }
             }
 
@@ -96,13 +96,13 @@
         </div>
         <form action="" id="submitForm">
           <input id="submitFormInput" autocomplete="off" />
-          <button id="submitFormButton">Send</button>
+          <button id="submitFormButton" class="btn">Send</button>
         </form>
       </div>
 
       <div id="pdf" class="col-md-6">
         <!-- <embed id="pdfDisplay" src="" width="100%" height="100%" /> -->
-        <iframe id="pdfDisplay" src="/frontend/default.jpg" width="100%" height="100%"> </iframe>
+        <iframe id="pdfDisplay" src="/frontend/default.html" width="100%" height="100%"> </iframe>
       </div>
       <!-- <button onclick="openPDF('/pdfs/Comp9414/week1a_Foundations.pdf')">click</button> -->
     </div>
