@@ -125,7 +125,13 @@ def webhook():
 def context(query):
     query=query.lower()
     intent_1 = int()
-    save1 = np.load('save2.npy')
+    
+    try:
+        save1 = np.load('save2.npy')
+    except FileNotFoundError:
+        save1 = np.load('save2_default.npy')
+    
+    
     save1 = list(save1)
     for key in intent_1:
         if  key in query:
