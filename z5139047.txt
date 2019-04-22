@@ -94,3 +94,18 @@ What was not finished?
 
 What is planned for next period?
 Writing the report and setting more intents.
+
+week 9
+What was planned?
+Writing the report and setting more intents. Adding more context information to backend.
+
+What was finished?
+I write the report about introduction of my module, implementation challenges and descriptions of Flask. I also added course overview, study level and offering terms into the context.
+
+Main issues
+If user need more information about course outline, he can go to course website to find it.
+
+What was not finished?
+
+What is planned for next period?
+Preparing the presentation.
