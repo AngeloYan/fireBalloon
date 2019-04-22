@@ -45,7 +45,6 @@
           var regex = /\(see (.+?\.pdf) Page (\d+) \)/;
           var matches = msgList[i].split(regex);
           // var replaced = msgList[i].replace(regex, "");
-          console.log(matches);
           if (matches && matches.length >= 3) {
             // iterate through matches
             // matches array format [pre-text, pdf_name, page_number]
@@ -60,7 +59,17 @@
             // $(newMsg).append($('<input>').attr({ type: 'button', name: 'btn1', value: 'a button', onclick: "displayPDF(" + matches[1] + ")" }));
             // $('#messages').prepend($("<div class='message messageBot row'>").append($("<p>").text(replaced)).append($('<input>').attr({ type: 'button', name: 'btn1', value: matches[0], onclick: "openPDF('/pdfs/" + matches[1] + "#page=" + (parseInt(matches[2]) + 1).toString() + "')" })));
           } else {
-            $('#messages').prepend($("<div class='message messageBot row'>").append($("<p>").text(matches[0])));
+            var regex = /(http.+$)/;
+            var matches = matches[0].split(regex);
+            if (matches && matches.length >= 2) {
+              for (var j = 0; j < matches.length; j += 2) {
+                if (matches[j]) {
+                  $('#messages').prepend($("<div class='message messageBot row'>").append($("<p>").text(matches[j])).append("<a href='#' onclick=openWeb('" + matches[j + 1] + "')>" + matches[j + 1] + "</a>"));
+                }
+              }
+            } else {
+              $('#messages').prepend($("<div class='message messageBot row'>").append($("<p>").text(matches[0])));
+            }
           }
         }
 
