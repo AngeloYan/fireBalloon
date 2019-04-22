@@ -42,6 +42,7 @@ def int():
     intent_1['lecturer']='int'
     intent_1['terms']='int'
     intent_1['level']='int'
+    intent_1['overview']='int'
     # intent_1['website']='int'
     return intent_1
 
