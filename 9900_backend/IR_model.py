@@ -105,7 +105,7 @@ def ir_model(query):
     if flat == True:
         answer = answer + 'Which was the best answer?\n(A feedback can help us improve the system.)\n'
     else:
-        answer = answer + 'Which was the best answer?\n(A feedback can help us improve the system.)\n(Note: Default Corpus)\n'
+        answer = answer + 'Which was the best answer?\n(A feedback will help us improve the system.)\n'
     return answer
 
 

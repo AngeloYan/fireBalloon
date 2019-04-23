@@ -42,11 +42,11 @@ def update(feedback):
             if flat == True:
                 return 'Thanks for your feedback. Do you have other questions?'
             else:
-                return 'Thanks for your feedback. Do you have other questions?\n(Data from Default Corpus)'
+                return 'Thanks for your feedback. Do you have other questions I can help with?'
             
             
             
             
     else:
-        return 'Sorry, your input is invalid. Do you want to try again or do you have another question about this course?'
+        return 'Sorry, your input is invalid. Do you want to try again or do you have other questions?'
     
