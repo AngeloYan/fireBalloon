@@ -1,24 +1,18 @@
 {
-  "id": "fc96e4de-2644-470b-b6ad-1219ed28df4b",
-  "name": "Lecturer",
+  "id": "a8b09bde-7967-401c-987e-30e06e28a90c",
+  "name": "good bye",
   "auto": true,
   "contexts": [],
   "responses": [
     {
       "resetContexts": false,
-      "affectedContexts": [
-        {
-          "name": "Lecturer-followup",
-          "parameters": {},
-          "lifespan": 2
-        }
-      ],
+      "affectedContexts": [],
       "parameters": [],
       "messages": [
         {
           "type": 0,
           "lang": "en",
-          "speech": "The lecturer\u0027s name is Alan Blair! A good professor that researches in AI."
+          "speech": "Bye, thanks for using Fire Balloon, hope to see you again soon!"
         }
       ],
       "defaultResponsePlatforms": {},

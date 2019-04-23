@@ -1,6 +1,6 @@
 {
-  "id": "da5e27dc-6479-425b-af2c-b37d6d8586f7",
-  "name": "timetable",
+  "id": "9622c274-fc1a-4bd4-a97d-7cdd1bb4be0c",
+  "name": "restart",
   "auto": true,
   "contexts": [],
   "responses": [
@@ -12,7 +12,7 @@
         {
           "type": 0,
           "lang": "en",
-          "speech": "Lectures: (Weeks 1-9, 11-13)\n-\u003eMonday 6-9pm in Central Lecture Block 7"
+          "speech": "Server Restarted"
         }
       ],
       "defaultResponsePlatforms": {},
@@ -20,7 +20,7 @@
     }
   ],
   "priority": 500000,
-  "webhookUsed": false,
+  "webhookUsed": true,
   "webhookForSlotFilling": false,
   "fallbackIntent": false,
   "events": []

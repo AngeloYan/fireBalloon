@@ -7,7 +7,13 @@
     {
       "resetContexts": false,
       "action": "input.unknown",
-      "affectedContexts": [],
+      "affectedContexts": [
+        {
+          "name": "DefaultFallbackIntent-followup",
+          "parameters": {},
+          "lifespan": 1
+        }
+      ],
       "parameters": [],
       "messages": [
         {
@@ -34,7 +40,7 @@
     }
   ],
   "priority": 500000,
-  "webhookUsed": false,
+  "webhookUsed": true,
   "webhookForSlotFilling": false,
   "fallbackIntent": true,
   "events": []

@@ -1,18 +1,27 @@
 {
-  "id": "099f0f10-7d1c-45c7-8a68-719a8e35e6ac",
-  "name": "course web site",
+  "id": "dfbc6615-8157-4648-b381-bf41608bab32",
+  "name": "study_level",
   "auto": true,
   "contexts": [],
   "responses": [
     {
       "resetContexts": false,
       "affectedContexts": [],
-      "parameters": [],
+      "parameters": [
+        {
+          "id": "a4da13fe-8230-4f2c-93f8-4806b77dc80f",
+          "required": false,
+          "dataType": "@courses",
+          "name": "course",
+          "value": "$course",
+          "isList": false
+        }
+      ],
       "messages": [
         {
           "type": 0,
           "lang": "en",
-          "speech": "Here\u0027s the link of this course, http://www.cse.unsw.edu.au/~cs9444."
+          "speech": []
         }
       ],
       "defaultResponsePlatforms": {},
@@ -20,7 +29,7 @@
     }
   ],
   "priority": 500000,
-  "webhookUsed": false,
+  "webhookUsed": true,
   "webhookForSlotFilling": false,
   "fallbackIntent": false,
   "events": []
