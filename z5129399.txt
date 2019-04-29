@@ -14,8 +14,7 @@ The obstacles(mainly about proposal, discussed but unsoved):
                                       1, how deep can the user's questions ask to the agent about course content?
                                       2, will database be provided
                                       3, do we need to support Collaborative Learning
-The first and sencond problems we didn't get helps from lab hours. Actually it's frustrating. We hope more suggestions or
-instructions. We knew we do not need achieve Collaborative Learning by the tutor said.
+The first and sencond problems we didn't get helps from lab hours. And we knew we do not need achieve Collaborative Learning by the tutor said.
 Next period we plan to do some research to work out a clear structure, as well as learn related knowledge and techniques.
 Meanwhile, complete the proposal by next Wednesday.
 
@@ -150,6 +149,7 @@ prepare for presention, test system and fix it
 fix some small issues to backend so that user can have a good conversation experience.
 make the diagrams for report and presentation
 test system and fix problem.
+
 3. What were main issues?
 we put our system into the web server. however, sometimes due to the connection delay our system 
 may have errors. especially in reading files. so I add lots of exception handlings to solve it.
@@ -159,3 +159,20 @@ No.
 
 5. What is planned for next period?
 prepare for presentation. continue to test system
+
+Week10
+
+1. What was planned?
+prepare for presentation. continue to test system
+
+2. What was finished?
+we fix some issues during the ysytem test and do much exercise for presentation
+
+3. What were main issues?
+no
+
+4. What was not finished?
+No.
+
+5. What is planned for next period?
+complete report
