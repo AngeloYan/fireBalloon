@@ -10,14 +10,19 @@ import json
 app = Flask(__name__)
 
 
-
+#
+# headers = {'content-type':'application/json'}
+# url="http://127.0.0.1:5050/register"
 
 l1=[['comp9444','9444','neural networks and deep learning'],'Monday 6-9pm, Weeks 1-9,11-13 ','Central Lecture Block 7',' http://www.cse.unsw.edu.au/~cs9444','Alan Blair\nhttps://www.cse.unsw.edu.au/~blair/\n','Term 3','Postgraduate','Topics chosen from: perceptrons, feedforward neural networks, backpropagation, Hopfield and Kohonen networks, restricted Boltzmann machine and autoencoders, deep convolutional networks for image processing; geometric and complexity analysis of trained neural networks; recurrent networks, language processing, semantic analysis, long short term memory; designing successful applications of neural networks; recent developments in neural networks and deep learning.']
 l2=[['comp9414','9414','artificial intelligence'],'Wed 10:00 - 13:00 (Weeks:11), Fri 10:00 - 13:00 (Weeks:1-8,10)','Sir John Clancy Auditorium (K-C24-G17)',' http://www.cse.unsw.edu.au/~cs9414','Alan Blair\nhttps://www.cse.unsw.edu.au/~blair/\n','Summer Term, Term 1, Term 2','Postgraduate','Overview of Artificial Intelligence. Topics include: the representation of knowledge, search techniques, problem solving, machine learning, expert systems, natural language understanding, computer vision and an Artificial Intelligence programming language (Prolog or LISP). Students may be required to submit simple Art ificial Intelligence programs, or essays on an aspect of A.I, for assessment, in areas such as robotics, computer vision, natural language processing, and machine learning.']
-l3=[['comp1531','1531','software engineering fundamentals'],'Tue 16:00 - 18:00 (Weeks:1-10), Wed 14:00 - 16:00 (Weeks:1-10)','Keith Burrows Theatre (K-J14-G5)',' http://www.cse.unsw.edu.au/~cs1531','Dr A Natarajan\n\nHere is his website: \nhttps://bit.ly/2UrFBUJ\n','Term 1, Term 3','Undergraduate','This course provides an introduction to software engineering principles: basic software lifecycle concepts, modern development methodologies, conceptual modeling and how these activities relate to programming. It also introduces the basic notions of team-based project management via conducting a project to design, build and deploy a simple web-based application. It is typically taken in the semester after completing COMP1511, but could be delayed and taken later. It provides essential background for the teamwork and project management required in many later courses.']
+l3=[['comp1531','1531','software engineering fundamentals'],'Tue 16:00 - 18:00 (Weeks:1-10), Wed 14:00 - 16:00 (Weeks:1-10)','Keith Burrows Theatre (K-J14-G5)',' http://www.cse.unsw.edu.au/~cs1531','Dr A Natarajan\nhttps://webcms3.cse.unsw.edu.au/users/z2136899\n','Term 1, Term 3','Undergraduate','This course provides an introduction to software engineering principles: basic software lifecycle concepts, modern development methodologies, conceptual modeling and how these activities relate to programming. It also introduces the basic notions of team-based project management via conducting a project to design, build and deploy a simple web-based application. It is typically taken in the semester after completing COMP1511, but could be delayed and taken later. It provides essential background for the teamwork and project management required in many later courses.']
 obj_1=[l1,l2,l3]
 
-
+#intent_1={}
+# save2=[None,None]
+# save2=np.array(save2)
+# np.save('save2.npy',save2)
 def int():
     intent_1 = {}
     for i in obj_1:
@@ -38,7 +43,7 @@ def int():
     intent_1['term']='int'
     intent_1['level']='int'
     intent_1['overview']='int'
-
+    # intent_1['website']='int'
     return intent_1
 
 
@@ -50,9 +55,10 @@ def webhook():
 
     # Get request parameters
     req = request.get_json(force=True)
-
+    action = req.get('queryResult')
     query = req.get('queryResult').get('queryText')
-
+    context1=req.get('queryResult').get('outputContexts')
+    para=req.get('queryResult').get('parameters')
 
     intent= req.get('queryResult').get('intent').get('displayName')
 
@@ -109,7 +115,9 @@ def webhook():
 
 
 
-
+    print(query)
+    # print(context)
+    print(para)
 
 
 
