@@ -103,9 +103,9 @@ def ir_model(query):
     for i in range(len(answer_list)):
         answer = answer + 'Suggested Answer ' + str(i+1) + ':\n' + answer_list[i] + '\n\n'
     if flat == True:
-        answer = answer + 'Which was the best answer?\n(Feedback can help us improve the system.)\n'
+        answer = answer + 'Which was the best answer?\n(Feedback helps us improve the system.)\n'
     else:
-        answer = answer + 'Which was the best answer?\n(Feedback will help us improve the system.)\n'
+        answer = answer + 'Which was the best answer?\n(Feedback helps us improve the system.)\n'
     return answer
 
 

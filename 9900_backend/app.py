@@ -80,7 +80,7 @@ def webhook():
 
 
     if intent == 'Default Welcome Intent':
-        ans4 = 'Hi! I am fire balloon, your personal study assistant! May I have your name?'
+        ans4 = 'Hi! I am Fire Balloon, your personal study assistant! May I have your name?'
         save3=[None,None]
         save3 = np.array(save3)
         np.save('save2.npy', save3)
@@ -126,9 +126,9 @@ def context(query):
     save1 = np.array(save1)
     np.save('save2.npy', save1)
     if save1[0] is None:
-        return 'what do you want to know about it'
+        return 'What would you like to know about it?'
     if save1[1] is None:
-        return 'what course do you want to know about?'
+        return 'Which course would you like to know about?'
 
 
     for i in obj_1:
