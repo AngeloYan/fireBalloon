@@ -141,7 +141,7 @@ What was planned?
 Implement voice recognition on the web interface.
 
 What was finished?
-Fixed display but in user interface.
+Fixed display bug in user interface.
 
 Main issues
 Lack of time this week due to other assessments.
@@ -156,7 +156,7 @@ on other platforms such as Messenger or Google Assistant.
 
 Week 8
 
-09/04/18
+09/04/19
 What was planned?
 Implement Facebook Messenger integration.
 
@@ -173,3 +173,37 @@ Nothing.
 
 What is planned for next period?
 Host Flask backend server online instead of locally.
+
+19/04/19
+What was planned?
+Host Flask backend server online instead of locally.
+
+What was finished?
+Host Flask backend server online instead of locally.
+
+Main issues
+Python dependencies were not given to me.
+
+What was not finished?
+Nothing.
+
+What is planned for next period?
+Improve user interface aesthetics.
+
+Week 9
+
+24/04/19
+What was planned?
+Improve user interface aesthetics.
+
+What was finished?
+Improve user interface aesthetics.
+
+Main issues
+Making the web page responsive for different screen sizes.
+
+What was not finished?
+Nothing.
+
+What is planned for next period?
+Display lecture notes PDFs on the web page.
