@@ -207,3 +207,21 @@ Nothing.
 
 What is planned for next period?
 Display lecture notes PDFs on the web page.
+
+19/04/19
+What was planned?
+Display lecture notes PDFs on the web page.
+
+What was finished?
+Added auto-scroll to chat window.
+
+Main issues
+Didn't know how to do this properly.
+Circumvented problem by rotating chat window 180 degrees and prepending the
+message because the window stays at the top if you append.
+
+What was not finished?
+Display lecture notes PDFs on the web page.
+
+What is planned for next period?
+Display lecture notes PDFs on the web page.
