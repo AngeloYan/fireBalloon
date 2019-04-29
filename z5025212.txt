@@ -225,3 +225,42 @@ Display lecture notes PDFs on the web page.
 
 What is planned for next period?
 Display lecture notes PDFs on the web page.
+
+20/04/19
+What was planned?
+Display lecture notes PDFs on the web page.
+
+What was finished?
+Detect PDF names and pages from server response.
+Display lecture notes PDFs on the web page.
+
+Main issues
+Filtering responses from the server for PDF names and pages.
+
+What was not finished?
+There are bugs when clicking on 2 pages from the same PDF.
+The page does not change.
+
+What is planned for next period?
+Fix PDF display bug.
+
+Week 10
+22/04/19
+What was planned?
+Fix PDF display bug.
+
+What was finished?
+Fixed PDF display bug.
+Detect URLs in server response.
+Display web pages next to chat window.
+
+Main issues
+Some websites are HTTP only which cannot be acccess from our HTTPS website. We
+have to use the HTTP version of our website to allow the other HTTP websites to
+be loaded on our page.
+
+What was not finished?
+Nothing.
+
+What is planned for next period?
+Prepare for project demo.
