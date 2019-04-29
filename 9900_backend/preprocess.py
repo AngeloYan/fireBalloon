@@ -15,8 +15,7 @@ nltk.download('stopwords')
 
 
 def construct_corpus(corpus_raw):
-    new_stopwords = set(stopwords.words('english')) | set(['something'])
-    #new_stopwords = set(stopwords.words('english'))
+    new_stopwords = set(stopwords.words('english')) | set(['something', 'yes', 'no'])
     
     corpus = []
     lemmatizer = WordNetLemmatizer()
