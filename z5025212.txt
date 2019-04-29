@@ -174,7 +174,7 @@ Nothing.
 What is planned for next period?
 Host Flask backend server online instead of locally.
 
-19/04/19
+14/04/19
 What was planned?
 Host Flask backend server online instead of locally.
 
@@ -192,7 +192,7 @@ Improve user interface aesthetics.
 
 Week 9
 
-24/04/19
+17/04/19
 What was planned?
 Improve user interface aesthetics.
 
