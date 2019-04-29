@@ -3,35 +3,41 @@ from flask import Flask, jsonify, make_response, request
 from IR_model import ir_model
 from feedback import update
 from keywords_extraction import keywords_extracted_tfidf
-import requests
-import json
+import string
+import numpy as np
+
 app = Flask(__name__)
 
 
-#
-# headers = {'content-type':'application/json'}
-# url="http://127.0.0.1:5050/register"
 
-l1=[['comp9444','9444','neural networks and deep learning'],'Monday 6-9pm, Weeks 1-9,11-13 ','Central Lecture Block 7 ',' http://www.cse.unsw.edu.au/~cs9444']
-l2=[['comp9414','9414','artificial intelligence'],'Wed 10:00 - 13:00 (Weeks:11), Fri 10:00 - 13:00 (Weeks:1-8,10)','Sir John Clancy Auditorium (K-C24-G17)',' http://www.cse.unsw.edu.au/~cs9414']
-l3=[['comp1531','1531','software engineering fundamentals'],'Tue 16:00 - 18:00 (Weeks:1-10), Wed 14:00 - 16:00 (Weeks:1-10)','Keith Burrows Theatre (K-J14-G5)',' http://www.cse.unsw.edu.au/~cs1531']
+
+l1=[['comp9444','9444','neural networks and deep learning'],'Monday 6-9pm, Weeks 1-9,11-13 ','Central Lecture Block 7',' http://www.cse.unsw.edu.au/~cs9444','Alan Blair\nHere is their website\nhttps://www.cse.unsw.edu.au/~blair/','Term 3','Postgraduate','Topics chosen from: perceptrons, feedforward neural networks, backpropagation, Hopfield and Kohonen networks, restricted Boltzmann machine and autoencoders, deep convolutional networks for image processing; geometric and complexity analysis of trained neural networks; recurrent networks, language processing, semantic analysis, long short term memory; designing successful applications of neural networks; recent developments in neural networks and deep learning.']
+l2=[['comp9414','9414','artificial intelligence'],'Wed 10:00 - 13:00 (Weeks:11), Fri 10:00 - 13:00 (Weeks:1-8,10)','Sir John Clancy Auditorium (K-C24-G17)',' http://www.cse.unsw.edu.au/~cs9414','Alan Blair\nHere is their website\nhttps://www.cse.unsw.edu.au/~blair/','Summer Term, Term 1, Term 2','Postgraduate','Overview of Artificial Intelligence. Topics include: the representation of knowledge, search techniques, problem solving, machine learning, expert systems, natural language understanding, computer vision and an Artificial Intelligence programming language (Prolog or LISP). Students may be required to submit simple Art ificial Intelligence programs, or essays on an aspect of A.I, for assessment, in areas such as robotics, computer vision, natural language processing, and machine learning.']
+l3=[['comp1531','1531','software engineering fundamentals'],'Tue 16:00 - 18:00 (Weeks:1-10), Wed 14:00 - 16:00 (Weeks:1-10)','Keith Burrows Theatre (K-J14-G5)',' http://www.cse.unsw.edu.au/~cs1531','Dr A Natarajan\nHere is their website\nhttps://bit.ly/2UrFBUJ','Term 1, Term 3','Undergraduate','This course provides an introduction to software engineering principles: basic software lifecycle concepts, modern development methodologies, conceptual modeling and how these activities relate to programming. It also introduces the basic notions of team-based project management via conducting a project to design, build and deploy a simple web-based application. It is typically taken in the semester after completing COMP1511, but could be delayed and taken later. It provides essential background for the teamwork and project management required in many later courses.']
 obj_1=[l1,l2,l3]
 
-intent_1={}
-save=[None,None]
 def int():
+    intent_1 = {}
     for i in obj_1:
         for j in i[0]:
+            j=j.lower()
             intent_1[j]='obj'
         for k in range(1,len(i)):
-            intent_1[j]='obj'
+            m=i[k].lower()
+            intent_1[m]='obj'
     intent_1['time'] = 'int'
     intent_1['where'] = 'int'
     intent_1['web'] = 'int'
     intent_1['when']='int'
-    intent_1['address']='int'
+    intent_1['location']='int'
     intent_1['place']='int'
+    intent_1['teach']='int'
+    intent_1['lecturer']='int'
+    intent_1['term']='int'
+    intent_1['level']='int'
+    intent_1['overview']='int'
     # intent_1['website']='int'
+    return intent_1
 
 
 @app.route('/webhook', methods=['POST'])
@@ -42,9 +48,7 @@ def webhook():
 
     # Get request parameters
     req = request.get_json(force=True)
-    action = req.get('queryResult')
     query = req.get('queryResult').get('queryText')
-    context1=req.get('queryResult').get('outputContexts')
     para=req.get('queryResult').get('parameters')
 
     intent= req.get('queryResult').get('intent').get('displayName')
@@ -68,12 +72,24 @@ def webhook():
         ans3 = {'fulfillmentText': ans3}
         return make_response(jsonify(ans3))
 
+    if intent == 'restart':
+        ans7=keywords_extracted_tfidf()
+        ans10='Restart successfully'
+        ans10 = {'fulfillmentText': ans10}
+        return make_response(jsonify(ans10))
+
+
     if intent == 'Default Welcome Intent':
-        ans4 = keywords_extracted_tfidf()
+        ans4 = 'Hi! I am fire balloon, your personal study assistant! May I have your name?'
+        save3=[None,None]
+        save3 = np.array(save3)
+        np.save('save2.npy', save3)
+
         ans4 = {'fulfillmentText': ans4}
         return make_response(jsonify(ans4))
 
-    if intent == 'place' or 'timetable' or 'course_web_site':
+    if intent == 'place' or intent =='timetable' or intent =='course_web_site' or intent =='what_about' or intent=='lecturer' or intent=='term' or intent == 'study_level' or intent == 'overview':
+        query=query.translate(str.maketrans('','',string.punctuation))
         check=query.split()
         for i in range(0 ,len(check)):
             if 'comp' in check[i]:
@@ -90,75 +106,55 @@ def webhook():
 
 
 
-    print(query)
-    # print(context)
-    print(para)
-
-
-    # Check if the request is for the translate action
-    # if action == 'translate.text':
-    #     # Get the parameters for the translation
-    #     text = req['queryResult']['parameters'].get('text')
-    #     source_lang = req['queryResult']['parameters'].get('lang-from')
-    #     target_lang = req['queryResult']['parameters'].get('lang-to')
-    #
-    #     # Fulfill the translation and get a response
-    #     output = translate(text, source_lang, target_lang)
-    #
-    #     # Compose the response to Dialogflow
-    ans = {'fulfillmentText': ans}
-               # 'outputContexts': req['queryResult']['outputContexts']}
-    # else:
-    #     # If the request is not to the translate.text action throw an error
-    #     log.error('Unexpected action requested: %s', json.dumps(req))
-    #     res = {'speech': 'error', 'displayText': 'error'}
-
-
-    # return make_response(jsonify(ans))
-# @app.route('/')
-# def hello_world():
-#     return 'hello world'
-
-# @app.route('/register', methods=['POST'])
-# def register():
-#     # print(request.headers)
-#     # print(request.form)
-#     # print(request.form['name'])
-#     # print(request.form.get('name'))
-#     # print(request.form.getlist('name'))
-#     # print(request.form.get('nickname', default='little apple'))
-#     # #do something else
-#     # #
-#     # #
-#     # message ={'fullfilment':''}
-#     return 'okk'
-
 def context(query):
     query=query.lower()
-    int()
+    intent_1 = int()
+    
+    try:
+        save1 = np.load('save2.npy')
+    except FileNotFoundError:
+        save1 = np.load('9900_backend/save2_default.npy')
+    
+    
+    save1 = list(save1)
     for key in intent_1:
         if  key in query:
             if intent_1[key] == 'int':
-                save[0] = key
+                save1[0] = key
             else:
-                save[1] = key
-    if save[0] is None:
+                save1[1] = key
+    save1 = np.array(save1)
+    np.save('save2.npy', save1)
+    if save1[0] is None:
         return 'what do you want to know about it'
-    if save[1] is None:
+    if save1[1] is None:
         return 'what course do you want to know about?'
+
+
     for i in obj_1:
         for j in i[0]:
-            if j == save[1]:
-                if save[0] == 'time' or save[0] =='when':
+            if j == save1[1]:
+                if save1[0] == 'time' or save1[0] =='when':
                     return i[1]
-                elif save[0] == 'where' or save[0] =='place' or save[0] =='address':
+                elif save1[0] == 'where' or save1[0] =='place' or save1[0] =='location':
                     return i[2]
-                elif save[0] == 'web':
+                elif save1[0] == 'web':
                     return i[3]
+                elif save1[0] == 'lecturer' or save1[0] == 'teach':
+                    return i[4]
+                elif save1[0]== 'term':
+                    return i[5]
+                elif save1[0]== 'level':
+                    return i[6]
+                elif save1[0]== 'overview':
+                    return i[7]
+        for k in i[1:]:
+            if k.lower() == save1[1]:
+                p=i[0]
 
-
-
+                return p[0]
 
 
 if __name__ == '__main__':
-    app.run(port=8080,debug=True)
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host='0.0.0.0', port=port)
