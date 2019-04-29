@@ -3,6 +3,6 @@ virtualenv:
 	virtualenv -p python3 venv
 	. venv/bin/activate
 	echo "Installing python dependencies"
-	pip install -r requirements.txt
+	pip3 install -r requirements.txt
 	echo "Installing node modules"
 	npm install
