@@ -1,9 +1,16 @@
-# capstone-project-fire-balloon
+# Fire Balloon Study Assistant
 
-npm install --save express@4.15.2
+Run the following commands from the root directory to install requirements
 
-npm install --save socket.io
+    make
+    virtualenv -p python3 venv
+    . venv/bin/activate
+    pip3 install -r requirements.txt
 
-npm install dialogflow
+To run the front-end server, run the following command from the root directory.
+    
+    node app.js
 
-node index.js
+To run the back-end server, run the following command from the root directory.
+    
+    FLASK_APP=9900_backend/app.py flask run
