@@ -95,7 +95,7 @@ def keywords_extracted_tfidf():
     store = np.array(store)
     np.save('corpus_data.npy',store)
     
-    return 'Restart Successfully'
+    return 'Restart successful'
     
     
    
